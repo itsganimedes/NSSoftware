@@ -10,6 +10,8 @@ let rareza=[
     2,  //pablo
     3,   //leonardo
     4,
+    0,
+    1
 ];
 
 let nfts = document.querySelectorAll(".nft");
