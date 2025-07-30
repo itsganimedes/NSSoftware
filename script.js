@@ -8,7 +8,8 @@
 */
 let rareza=[
     2,  //pablo
-    3   //leonardo
+    3,   //leonardo
+    4,
 ];
 
 let nfts = document.querySelectorAll(".nft");
@@ -34,6 +35,6 @@ for (let i = 0; i < nfts.length; i++) {
         spanRareza.textContent = "Común";
     } else if (rareza[i] === 4) {
         spanRareza.classList.add("mitico");
-        spanRareza.textContent = "Absolutamente Mítico";
+        spanRareza.textContent = "Mítico";
     }
 }
