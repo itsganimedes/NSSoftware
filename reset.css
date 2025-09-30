@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+body{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: linear-gradient(0deg, #b0bdb9, #8ec0b3);
+}
+
+#container{
+    width: 100%;
+    max-width: 100rem;
+    min-height: 50rem;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: black;
+    transform: translateY(-0.2rem);
+}
