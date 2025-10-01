@@ -7,7 +7,7 @@
 
 body{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background: linear-gradient(0deg, #b0bdb9, #8ec0b3);
+    background: linear-gradient(0deg, #2e302f, #1d1d1d);
 }
 
 #container{
@@ -20,6 +20,20 @@ a{
     text-decoration: none;
 }
 a:hover{
-    color: black;
+    color: rgb(85, 231, 236);
     transform: translateY(-0.2rem);
+}
+
+.info{
+    color: #ccc;
+    margin: 2rem auto;
+    padding: 0 10rem;
+    text-align: justify;
+}
+
+@media (max-width: 1050px)
+{
+    .info{
+        padding: 0 3rem;
+    }
 }
