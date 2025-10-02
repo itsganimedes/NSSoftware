@@ -31,6 +31,32 @@ a:hover{
     text-align: justify;
 }
 
+footer{
+    color: #ccc;
+    text-align: center;
+    position: relative;
+    margin: 5rem 0 0 0;
+    z-index: 0;
+    height: 5rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer::before{
+    content: '';
+    position: absolute;
+    width: 40rem;
+    height: 20rem;
+    border-radius: 50%;
+    background: #151b1f;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -12%);
+    z-index: -1;
+}
+
 @media (max-width: 1050px)
 {
     .info{
