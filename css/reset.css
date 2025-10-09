@@ -27,6 +27,7 @@ body{
 a{
     text-decoration: none;
 }
+
 a:hover{
     color: rgb(85, 231, 236);
     transform: translateY(-0.2rem);
@@ -34,7 +35,7 @@ a:hover{
 
 .info{
     color: #ccc;
-    margin: 2rem auto;
+    margin: 0 auto;
     padding: 0 15rem;
     text-align: justify;
 }
