@@ -131,8 +131,9 @@
         list-style: none;
     }
 
-    .index_info ul li{
-        width: 20rem;
+    .index_info_2 ul li{
+        text-wrap: nowrap;
+        width: 10rem;
     }
 }
 
