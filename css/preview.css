@@ -8,6 +8,10 @@ main img{
     width: 25%;
 }
 
+.img3{
+    width: 35%;
+}
+
 .boton{
     background: #77adb1;
     padding: 0.2rem 2rem;
@@ -32,6 +36,17 @@ main img{
     color: #ccc;
 }
 
+.icon-grande{
+    width: 100%;
+    font-size: 3rem;
+    color: #f3fa91;
+    text-align: center;
+}
+
+.icon-grande:hover{
+    transform: rotate(20deg);
+}
+
 @media (max-width: 1050px)
 {
     main img{
@@ -39,6 +54,10 @@ main img{
     }
 
     .img2{
+        width: 50%;
+    }
+
+    .img3{
         width: 50%;
     }
 }
