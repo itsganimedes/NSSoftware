@@ -94,8 +94,11 @@
 .index_info ul li{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     width: 33rem;
+}
+
+.index_info ul li p{
+    margin-left: 1rem;
 }
 
 .index_info_2{
@@ -120,6 +123,24 @@
     margin-left: 2rem;
 }
 
+.tech{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0 5rem 0;
+}
+
+.tech img{
+    max-width: 14rem;
+}
+
+.tech img:hover{
+    transform: translateY(-0.5rem) rotate(7deg);
+} 
+
 @media (max-width: 1050px)
 {
     .catalogo{
@@ -132,12 +153,18 @@
     }
 
     .index_info ul li{
+        text-align: left;
         width: 20rem;
     }
 
     .index_info_2 ul li{
         text-wrap: nowrap;
         width: 10rem;
+    }
+
+    .tech{
+        flex-direction: column;
+        padding: 2rem;
     }
 }
 
