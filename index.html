@@ -13,19 +13,24 @@
 </head>
 <body>
     <div id="container">
-        <header>
-            <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
-            <h1><span>NSSoftware</span></h1>
-        </header>
 
-        <nav>
-            <a href="index.html" style="color: #77adb1;">Productos</a>
-            <a href="info.html">Información</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+        <div class="header-nav">
+            <header>
+                <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
+                <h1><span>NSSoftware</span></h1>
+            </header>
+
+            <nav>
+                <a href="index.html" style="color: #77adb1;">Productos</a>
+                <a href="info.html">Información</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+
+
 
         <div class="index_info">
-            <p style="font-size: 1.1rem;">Desarrollo de software práctico para negocios locales y emprendedores.</p>
+            <p class="title-2">Desarrollo de software práctico para negocios locales y emprendedores.</p>
             <ul>
                 <li>
                     <i class="fa-solid fa-check" style="color: green;"></i>
@@ -46,52 +51,80 @@
             </ul>
         </div>
 
-        <p class="title">Catálogo</p>
-        
-
         <section class="catalogo">
 
-            <!-- CASHREG -->
-            <article class="producto">
-                <p class="producto-title"><i class="fa-solid fa-desktop"></i> Cashreg</p>
-                <!-- <p class="update">ACTUALIZACIÓN</p> -->
-                <p class="producto-desc">Cashreg es un registro de caja virtual confiable e intuitivo. Te permite llevar un monitoreo limpio de tus ingresos y egresos. Ideal para kioscos, almacenes y pequeños comercios que quieran llevar el control de ventas de una forma extremadamente sencilla.</p>
-                <p style="color: green;">$18,000</p>
-                <a href="cashreg.html"><i class="fa-solid fa-eye"></i> Ver</a>
-            </article>
+            <p class="title">Catálogo</p>
 
-            <!-- PHOENIXGYM -->
-            <article class="producto">
-                <p class="producto-title"><i class="fa-solid fa-desktop"></i> Gestor Gym</p>
-                <p class="producto-desc">Es un gestor de gimnasios personalizable. Incluye registro de usuarios, registro de asistencias, sistema personalizado de puntaje, avisos por deuda, gestor de administrador, entre otras funciones.</p>
-                <p style="color: green;">$55,000</p>
-                <a href="gym.html"><i class="fa-solid fa-eye"></i> Ver</a>
-            </article>
+            <div class="productos">
 
-            <!-- POSKo -->
-            <article class="producto">
-                <p class="producto-title"><i class="fa-solid fa-desktop"></i> POSKo</p>
-                <p class="producto-desc">POSKo es un sistema de punto de venta moderno, simple y eficiente, diseñado especialmente para pequeños y medianos negocios que buscan una herramienta práctica, estable y con apariencia profesional.</p>
-                <p style="color: green;">$79,999</p>
-                <a href="posko.html"><i class="fa-solid fa-eye"></i> Ver</a>
-            </article>
+                <!-- CASHREG -->
+                <article class="producto">
+                    <p class="producto-title"><i class="fa-solid fa-desktop"></i> Cashreg</p>
+                    <!-- <p class="update">ACTUALIZACIÓN</p> -->
+                    <p class="producto-desc">Cashreg es un registro de caja virtual confiable e intuitivo. Te permite llevar un monitoreo limpio de tus ingresos y egresos. Ideal para kioscos, almacenes y pequeños comercios que quieran llevar el control de ventas de una forma extremadamente sencilla.</p>
+                    <p style="color: green;">$18,000</p>
+                    <a href="cashreg.html"><i class="fa-solid fa-eye"></i> Ver</a>
+                </article>
+
+                <!-- PHOENIXGYM -->
+                <article class="producto">
+                    <p class="producto-title"><i class="fa-solid fa-desktop"></i> Gestor Gym</p>
+                    <p class="producto-desc">Es un gestor de gimnasios personalizable. Incluye registro de usuarios, registro de asistencias, sistema personalizado de puntaje, avisos por deuda, gestor de administrador, entre otras funciones.</p>
+                    <p style="color: green;">$55,000</p>
+                    <a href="gym.html"><i class="fa-solid fa-eye"></i> Ver</a>
+                </article>
+
+                <!-- POSKo -->
+                <article class="producto">
+                    <p class="producto-title"><i class="fa-solid fa-desktop"></i> POSKo</p>
+                    <p class="producto-desc">POSKo es un sistema de punto de venta moderno, simple y eficiente, diseñado especialmente para pequeños y medianos negocios que buscan una herramienta práctica, estable y con apariencia profesional.</p>
+                    <p style="color: green;">$79,999</p>
+                    <a href="posko.html"><i class="fa-solid fa-eye"></i> Ver</a>
+                </article>
+
+            </div>
 
 
         </section>
 
-                <p class="title">Tecnologías</p>
-
         <div class="tech">
-            <div class="tech-img">
-                <img src="img/Csharp_Logo.png" alt="csharp">
-            </div>
-            <div class="tech-img">
-                <img src="img/SQLite370.svg.png" alt="sqlite">
-            </div>
-            <div class="tech-img">
-                <img src="img/Microsoft_.NET_logo.svg.png" style="max-width: 9rem;" alt=".net">
+
+            <p class="title">Tecnologías</p>
+
+            <div class="techs">
+                    <div class="tech-img">
+                        <img src="img/Csharp_Logo.png" alt="csharp">
+                    </div>
+                    <div class="tech-img">
+                        <img src="img/SQLite370.svg.png" alt="sqlite">
+                    </div>
+                    <div class="tech-img">
+                        <img src="img/Microsoft_.NET_logo.svg.png" style="max-width: 9rem;" alt=".net">
+                    </div>
             </div>
         </div>
+
+        <div class="ad"></div>
+
+        <div class="img-info" style="background: #151b1f;">
+
+            <img src="img/Mini-Robot.png" id="northbot" alt="northbot">
+
+            <div style="position: relative;">
+                <p class="info-3" style="color: gray;">dicen por ahí...</p>
+                <p class="title-2">Las decisiones marcan el futuro</p>
+
+                <p class="info-3">¿Conoces el poder de un programa?</p>
+                <p class="info-3">El trabajo manual cansa, porque somos humanos.</p>
+                <p class="info-3">Pero, ¿te decimos un secreto?</p>
+                <p class="info-3">Los programas <b>nunca se cansan</b>.</p>
+                <p class="info-3">Dejales el trabajo duro a ellos. ¿Vos? <b>Solo tocás botones</b>.</p>
+            </div>
+
+        </div>
+
+        <p class="info-2" style="margin: 3rem 0;">Desarrollo & distribución de software personalizado.</p>
+
     </div>
     <footer>
         North Star Software &copy;

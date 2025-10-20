@@ -1,11 +1,19 @@
 .catalogo{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    gap: 3rem;
     margin: 5rem 0;
+}
+
+.productos{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .producto{
@@ -80,7 +88,8 @@
 }
 
 .index_info{
-    text-align: center;
+    text-align: left;
+    margin: 2rem;
 }
 
 .index_info ul{
@@ -88,7 +97,6 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .index_info ul li{
@@ -101,36 +109,50 @@
     margin-left: 1rem;
 }
 
-.index_info_2{
-    text-align: center;
-}
-
-.index_info_2 ul{
+.contacto ul{
     margin: 2rem;
     list-style: none;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
 }
 
-.index_info_2 ul li{
+.contacto ul li{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 12rem;
 }
 
-.index_info_2 ul li p{
-    margin-left: 2rem;
+.contacto ul li i{
+    font-size: 2rem;
+}
+
+.contacto ul li p{
+    margin-top: 2rem;
 }
 
 .tech{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+    background: #141414;
+    width: calc(100% + 8rem);
+    margin: 0 -4rem;
+}
+
+.techs{
     display: flex;
     flex-direction: row;
     width: 100%;
     gap: 3rem;
     align-items: center;
     justify-content: center;
-    padding: 1rem 0 5rem 0;
 }
 
 .tech img{
@@ -141,6 +163,43 @@
     transform: translateY(-0.5rem) rotate(7deg);
 } 
 
+.img-info{
+    display: flex;
+    flex-direction: row;
+    padding: 3rem 0;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% + 8rem);
+    margin: 0 -4rem;    
+}
+
+.img-info p{
+    text-align: left;
+}
+
+#northbot{
+    width: 20%;
+}
+
+.ad {
+    background: url("../img/Ads.png") repeat-x;
+    background-position: 0 center; 
+    height: 15rem;
+    overflow: hidden;
+    animation: toleft 10s linear infinite; 
+    animation-direction: alternate;
+    width: calc(100% + 8rem);
+    margin: 0 -4rem;
+}
+
+@keyframes toleft {
+    0% {
+        background-position: 0 center;
+    }
+    100% {
+        background-position: -100% center; /* mueve la imagen completa hacia la izquierda */
+    }
+}
 @media (max-width: 1050px)
 {
     .catalogo{
@@ -157,14 +216,44 @@
         width: 20rem;
     }
 
-    .index_info_2 ul li{
+    .contacto ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .contacto ul li{
         text-wrap: nowrap;
         width: 10rem;
     }
 
     .tech{
+        margin: 0;
+        width: 100%;
+    }
+
+    .techs{
         flex-direction: column;
         padding: 2rem;
+    }
+
+    .img-info{
+        padding: 3rem 3rem;
+        flex-direction: column;
+    }
+
+    .ad{
+        margin: 0;
+        width: 100%;
+    }
+
+    .img-info{
+        margin: 0;
+        width: 100%;
+    }
+
+    #northbot{
+        width: 50%;
     }
 }
 
@@ -177,7 +266,6 @@
 .items{
     color: #1d1d1d;
     margin: 2rem auto;
-    padding: 0 15rem;
     text-align: justify;
     list-style: none;
     display: flex;
@@ -246,12 +334,9 @@
 }
 
 
+
 @media (max-width: 1050px)
 {
-    .info{
-        padding: 0 3rem;
-    }
-
     .items{
         flex-direction: column;
         gap: 3rem;

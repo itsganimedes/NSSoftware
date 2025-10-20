@@ -9,19 +9,27 @@ body{
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background: linear-gradient(0deg, #1f292e, #151b1f);
     text-align: justify;
-}
+}   
 
 #container{
     width: 100%;
     max-width: 100rem;
     min-height: 100vh;
+    padding: 0 4rem;
 }
 
 .title{
     font-size: 1.5rem;
     text-align: center;
     font-weight: bold;
-    margin: 2rem 0;
+    margin: 1rem 0;
+}
+
+.title-2{
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: bold;
+    margin: 1rem 0;
 }
 
 a{
@@ -35,8 +43,6 @@ a:hover{
 
 .info{
     color: #ccc;
-    margin: 0 auto;
-    padding: 0 15rem;
     text-align: justify;
 }
 
@@ -44,7 +50,6 @@ a:hover{
     color: #ccc;
     padding: 0 15rem;
     font-size: 1.1rem;
-    margin: 1rem 0;
     text-align: center;
 }
 
@@ -52,10 +57,14 @@ p{
     color: #ccc;
 }
 
+.contenido{
+    padding: 0 2rem;
+}
+
 @media (max-width: 1050px)
 {
-    .info{
-        padding: 0 3rem;
+    #container{
+        padding: 0;
     }
 
     .info-2{
