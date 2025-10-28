@@ -28,6 +28,11 @@
         </div>
         
         <main>
+            <div class="selectitem">
+                <p class="option active" data-page="posko.html">Estándar</p>
+                <p class="option" data-page="poskopro.html">Pro</p>
+            </div>
+
             <p class="title">POSKo</p>
 
             <p class="info-2">Creado por NSSoftware, POSKo combina una interfaz amigable con funciones esenciales para la gestión diaria del negocio, permitiendo controlar productos, ventas, clientes, compras y estadísticas con facilidad.</p>
@@ -100,7 +105,7 @@
 
             <p class="info-2">Esto es <b>POSKo</b> base. Recuerda que <b style="color: rgb(214, 214, 158);">las funciones pueden ser adaptadas a tus necesidades.</b></p>
             <p class="title">Características Técnicas</p>
-            <p class="info-2">Base de datos: SQLite (rápida y segura)</p>
+            <p class="info-2">Base de datos: SQLite (rápida y segura).</p>
             <p class="info-2">Tipo: local (se guarda en tu PC).</p>
             <p class="info-2">Compatible con Windows.</p>
             <p class="info-2">No requiere conexión a internet ni servidores externos.</p>
@@ -118,5 +123,23 @@
     <footer>
         North Star Software &copy;
     </footer>
+
+    <script>
+        const options = document.querySelectorAll('.selectitem .option');
+
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                // Cambiar clase activa
+                options.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+
+                // Redirigir a otra página
+                const page = option.getAttribute('data-page');
+                if(page){
+                    window.location.href = page; // Aquí hace la navegación
+                }
+            });
+        });
+    </script>
 </body>
 </html>

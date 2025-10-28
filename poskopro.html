@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - NSS</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header_nav.css">
+    <link rel="stylesheet" href="css/boxes.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/preview.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/NSSlogo2-removebg-preview.png">
+</head>
+<body>
+    <div id="container">
+        <div class="header-nav">
+            <header>
+                <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
+                <h1><span>NSSoftware</span></h1>
+            </header>
+
+            <nav>
+                <a href="index.html" style="color: #77adb1;">Productos</a>
+                <a href="info.html">Información</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+        
+        <main>
+            <div class="selectitem">
+                <p class="option" data-page="posko.html">Estándar</p>
+                <p class="option active" data-page="poskopro.html">Pro</p>
+            </div>
+
+            <p class="title">POSKo Pro</p>
+
+            <p class="info-2" style="color: rgb(147, 206, 124); margin: 2rem 0;">Leer el artículo de POSKo Estándar antes de este.</p>
+
+
+            <p class="info-2">POSKo Pro es una solución integral para responsables que desean tener un control total de cada rincón de su negocio.</p>
+
+            <img src="img/POSKo/POSKoPro.png" alt="main">
+
+            <p class="info-2">POSKo Pro presenta una diferencia fundamental con su versión estándar: funciona de forma online, a través de LAN (misma red Wi-Fi).</p>
+
+            <p class="info-2">Esto significa que es posible utilizarlo desde <b>distintas máquinas</b>.</p>
+
+            <img src="img/POSKo/HistorialPro.png" class="img3" alt="categorias">
+
+            <p class="info-2">POSKo Pro presenta un sencillo sistema de roles empleado-administrador que se encarga de restringir las funciones adecuadas para cada rol, sin cortar el flujo del negocio.</p>
+
+            <br>
+
+            <p class="info-2">Recomendamos POSKo Pro a todo tipo de negocios, y en especial a aquellos que mantengan relación con empleados.</p>
+
+            <br>
+
+            <p class="info-2">Esto es <b>POSKo Pro</b> base. Recuerda que <b style="color: rgb(214, 214, 158);">las funciones pueden ser adaptadas a tus necesidades.</b></p>
+            <p class="title">Características Técnicas</p>
+            <p class="info-2">Base de datos: MySQL (online, profesional y segura).</p>
+            <p class="info-2">Tipo: LAN (Misma red Wi-Fi).</p>
+            <p class="info-2">Compatible con Windows.</p>
+            <p class="info-2">Requiere conexión a internet.</p>
+            <p class="info-2">Instalación de servidor guiada y ejecutada por nosotros.</p>
+            <p class="info-2">Instalación liviana, interfaz intuitiva y sin dependencias complejas.</p>
+
+            <p class="info-2" style="color: green;">Precio actual: $63,000 ARS</p>
+
+            <a class="boton" href="https://wa.me/5492645128508?text=¡Hola!%20Quiero%20saber%20más%20sobre%20POSKo%20Pro." target="_blank"><i class="fa-brands fa-whatsapp"></i> Solicitar</a>
+
+            <a href="index.html" class="b_volver">Volver</a>
+
+        </main> 
+
+    </div>
+    <footer>
+        North Star Software &copy;
+    </footer>
+
+    <script>
+        const options = document.querySelectorAll('.selectitem .option');
+
+        options.forEach(option => {
+            option.addEventListener('click', () => {
+                // Cambiar clase activa
+                options.forEach(opt => opt.classList.remove('active'));
+                option.classList.add('active');
+
+                // Redirigir a otra página
+                const page = option.getAttribute('data-page');
+                if(page){
+                    window.location.href = page; // Aquí hace la navegación
+                }
+            });
+        });
+    </script>
+</body>
+</html>
