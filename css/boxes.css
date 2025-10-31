@@ -385,6 +385,13 @@
     cursor: pointer;
 }
 
+.ulcentrado{
+    text-align: left;
+    color: #ccc;
+    width: fit-content;
+    margin: 2rem auto;
+}
+
 
 @media (max-width: 1050px)
 {
