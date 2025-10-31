@@ -1,3 +1,162 @@
+#software_solutions{
+    padding: 0.5rem 1rem;
+    width: fit-content;
+    margin: 0 auto;
+    background: white;
+    color: #969696;
+    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.4);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#software_solutions:hover{
+    transform: translateY(-0.2rem);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.b1{
+    padding: 0.7rem 1rem;
+    width: 10rem;
+    background: white;
+    color: rgb(19, 19, 19);
+    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.4);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.b1:hover{
+    color: rgb(19, 19, 19);
+}
+
+.b2{
+    padding: 0.7rem 1rem;
+    width: 10rem;
+    background: rgb(14, 14, 14);
+    color: rgb(237, 232, 237);
+    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.4);
+    border-radius: 8px;
+    text-align: center;
+}
+.b2:hover{
+    color: rgb(237, 232, 237);
+}
+
+/* CARACTERISTICAS INDEX */
+
+.caracteristicas{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.caracteristica{
+    width: 22rem;
+    height: 15rem;
+    background: #1f292e;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(0,0,0,0.3);
+}
+
+.caracteristica i{
+    font-size: 1.4rem;
+    color: #141414;
+    background-color: #f8f8f8ee;
+    padding: 0.7rem;
+    border-radius: 10px;
+}
+
+.car_title{
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.car_desc{
+    color: gray;
+    font-size: 0.9rem;
+}
+
+/* **************** */
+
+/* LINEA */
+
+.line{
+    width: calc(100% + 12rem);
+    height: 0.1px;
+    background: #161616;
+    box-shadow: 0 2px 30px rgba(104, 104, 104, 0.9);
+    margin: 5rem -6rem;
+}
+
+/* **************** */
+
+/* MANTENIMIENTOS (MNTS) */
+
+.mnts{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0 5rem 0;
+    flex-wrap: wrap;
+}
+
+.mnt{
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #83bebe;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgb(0, 0, 0,0.8);
+}
+
+.mnt:hover{
+    transform: scale(1.05);
+}
+
+.mnt:hover i{
+    transform: rotate(10deg);
+}
+
+.mnt p{
+    color: #141414;
+}
+
+.mnt i{
+    font-size: 2rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 50%;
+    margin: 1rem 0;
+    border: 1px solid #141414;
+}
+
 .catalogo{
     display: flex;
     flex-direction: column;
@@ -92,23 +251,6 @@
     margin: 2rem;
 }
 
-.index_info ul{
-    margin: 2rem;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-}
-
-.index_info ul li{
-    display: flex;
-    flex-direction: row;
-    width: 33rem;
-}
-
-.index_info ul li p{
-    margin-left: 1rem;
-}
-
 .contacto ul{
     margin: 2rem;
     list-style: none;
@@ -143,7 +285,7 @@
     padding: 5rem 0;
     background: #141414;
     width: calc(100% + 8rem);
-    margin: 0 -4rem;
+    margin: 5rem -4rem 0 -4rem;
 }
 
 .techs{
@@ -181,6 +323,18 @@
     width: 20%;
 }
 
+.img-working{
+    background: url("../img/Working.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -20rem;
+    background-attachment: fixed;
+    width: calc(100% + 12rem);
+    height: 8rem;
+    margin: -2rem -6rem 2rem -6rem;
+    opacity: 0.5;
+}
+
 .ad {
     background: url("../img/Ads.png") repeat-x;
     background-position: 0 center; 
@@ -188,8 +342,8 @@
     overflow: hidden;
     animation: toleft 10s linear infinite; 
     animation-direction: alternate;
-    width: calc(100% + 8rem);
-    margin: 0 -4rem;
+    width: calc(100% + 12rem);
+    margin: 5rem -6rem;
 }
 
 @keyframes toleft {
@@ -238,6 +392,18 @@
         flex-direction: column;
     }
 
+    .img-working{
+        width: calc(100% + 7rem);
+        height: 12rem;
+        margin: -2rem -5rem 2rem -5rem;
+        background-position: 0 0;
+    }
+
+    .line{
+        width: calc(100% + 7rem);
+        margin: 5rem -5rem;
+    }
+
     .index_info ul{
         margin: 2rem;
         list-style: none;
@@ -275,8 +441,8 @@
     }
 
     .ad{
-        margin: 0;
-        width: 100%;
+        margin: 0 -2rem;
+        width: calc(100% + 4rem);
     }
 
     .img-info{

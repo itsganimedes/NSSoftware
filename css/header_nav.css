@@ -9,17 +9,35 @@ header{
     padding: 0 3rem;
 }
 
-.header-nav{
+.header-nav {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background: #0f2025;
-    border-bottom: 1px solid rgb(58, 58, 58)414;
-    box-shadow: 0 4px 6px rgb(0, 0, 0, 0.08);
+    background: none; /* quitamos el fondo directo */
+    border-bottom: 1px solid rgb(58, 58, 58);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
     width: calc(100% + 8rem);
     margin: 0 -4rem;
+    overflow: hidden; /* para que el blur no se salga */
 }
+
+.header-nav::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("../img/headerfondo.jpeg") center/cover no-repeat;
+    filter: blur(20px);
+    transform: scale(1.1);
+    z-index: 0;
+}
+
+.header-nav > * {
+    position: relative;
+    z-index: 1; /* el contenido encima del fondo */
+}
+
 
 #logo{
     width: 6rem;

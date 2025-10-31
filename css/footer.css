@@ -1,17 +1,49 @@
 footer{
     color: #ccc;
-    text-align: center;
+    text-align: left;
     position: relative;
     margin: 5rem 0 0 0;
-    z-index: 0;
-    height: 5rem;
-    overflow: hidden;
+    background: #151b1f;
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: center;
+    padding: 4rem 0;
+    gap: 5rem;
 }
 
-footer::before{
+footer a{
+    color: white;
+}
+
+.seccion{
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+}
+
+.seccion b{
+    margin: 1rem 0;
+}
+
+.seccion a{
+    color: rgb(122, 122, 122);
+}
+
+.seccion section{
+    display: flex;
+    flex-direction: column;
+    max-width: 25rem;
+    height: 5rem;
+    align-items: flex-start;
+}
+
+.seccion img{
+    width: 4%;
+    margin: 1rem 0;
+}
+
+/* footer::before{
     content: '';
     position: absolute;
     width: 40rem;
@@ -22,4 +54,12 @@ footer::before{
     left: 50%;
     transform: translate(-50%, -12%);
     z-index: -1;
+} */
+
+@media (max-width: 1050px)
+{
+    footer{
+        flex-direction: column;
+        padding: 3rem 5rem;
+    }
 }
