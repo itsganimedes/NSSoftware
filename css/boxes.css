@@ -396,7 +396,7 @@
         width: calc(100% + 7rem);
         height: 12rem;
         margin: -2rem -5rem 2rem -5rem;
-        background-position: 0 0;
+        background-position: 30% -3rem;
     }
 
     .line{
