@@ -79,6 +79,10 @@
     box-shadow: 0 4px 6px rgb(0,0,0,0.3);
 }
 
+.caracteristica:hover{
+    border: 1px solid #ccc;
+}
+
 .caracteristica i{
     font-size: 1.4rem;
     color: #141414;
@@ -324,10 +328,10 @@
 }
 
 .img-working{
-    background: url("../img/Working.png");
+    background: url("../img/Nssticket.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 0 -20rem;
+    background-position: 0 -30rem;
     background-attachment: fixed;
     width: calc(100% + 12rem);
     height: 8rem;
@@ -399,16 +403,27 @@
         flex-direction: column;
     }
 
+    .ulcentrado{
+        text-align: left;
+        max-width: 55%;
+    }
+
+
     .img-working{
         width: calc(100% + 7rem);
+        background-attachment: initial;
         height: 12rem;
         margin: -2rem -5rem 2rem -5rem;
-        background-position: 30% -3rem;
+        background-position: 30% -7rem;
     }
 
     .line{
         width: calc(100% + 7rem);
         margin: 5rem -5rem;
+    }
+    
+    .caracteristicas{
+        max-width: 100%;
     }
 
     .index_info ul{
