@@ -46,6 +46,13 @@ body{
     margin: 2rem 0;
 }
 
+.title-5{
+    font-size: 1.5rem;
+    text-align: left;
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
 
 a{
     text-decoration: none;
@@ -74,6 +81,11 @@ p{
 
 .contenido{
     padding: 0 2rem;
+}
+
+ul{
+    color: #ccc;
+    margin: 2rem;
 }
 
 @media (max-width: 1050px)
