@@ -276,6 +276,129 @@
     top: -1.3rem;
 }
 
+/* LINEA DEL TIEMPO */
+
+.politicas{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 2rem 0;
+}
+
+.politicas a{
+    color: #141414;
+    background: #ccc;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 30rem;
+}
+
+.politicas i{
+    margin-right: 1rem;
+}
+
+@media (max-width: 1050px)
+{
+
+    .politicas a{
+        max-width: 100%;
+    }
+
+}
+
+/* ************** */
+
+/* Articulos de poltiicas */
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(6px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Contenedor del artículo (ventana modal) */
+.articulo {
+    background: rgb(240, 240, 240);
+    color: #141414;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    max-width: 600px;
+    width: 90%;
+    text-align: center;
+    animation: aparecer 0.2s ease-out;
+    position: relative;
+
+    /* 🔽 Nuevo: altura máxima y scroll interno */
+    max-height: 80vh; /* ocupa como máximo el 80% de la altura de la ventana */
+    overflow-y: auto;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #aaa transparent; /* colorcito suave */
+}
+
+.articulo::-webkit-scrollbar {
+    width: 8px;
+}
+
+.articulo::-webkit-scrollbar-thumb {
+    background: #aaa;
+    border-radius: 4px;
+}
+
+.articulo::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+/* Título (el <b>) */
+.articulo b {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #111;
+}
+
+/* Parrafos */
+.articulo p {
+    text-align: justify;
+    line-height: 1.5;
+    color: rgb(58, 58, 58);
+}
+
+.articulo ul{
+    color: rgb(58, 58, 58);
+}
+
+/* Botón de cerrar */
+.cerrar {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.9rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #444;
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: #000;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ************** */
+
 @media (max-width: 1050px)
 {
     .linea_tiempo{

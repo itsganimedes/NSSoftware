@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - NSS</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header_nav.css">
+    <link rel="stylesheet" href="css/boxes.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/NSSlogo2-removebg-preview.png">
+</head>
+<body>
+    <div id="container">
+
+        <div class="header-nav">
+            <header>
+                <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
+                <h1><span>NSSoftware</span></h1>
+            </header>
+
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="info.html">Información</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </div>
+
+        <section class="contenido">
+
+            <p class="title-4">Políticas y legal</p>
+            <p class="info">Te invitamos a echar un vistazo a las políticas de nuestra compañía.</p>
+            <p class="info">Ellas nos permiten desempeñarnos con profesionalismo y seguridad laboral.</p>
+
+            <div class="politicas">
+                <a href="#" onclick="mostrar('normas')"><i class="fa-solid fa-arrow-right"></i> Normas generales</a>
+                <a href="#" onclick="mostrar('licencia')"><i class="fa-solid fa-arrow-right"></i> Régimen de Licenciamiento</a>
+                <a href="#" onclick="mostrar('acuerdo')"><i class="fa-solid fa-arrow-right"></i> Acuerdo de Venta</a>
+            </div>
+
+            <div id="overlay" onclick="cerrar(event)">
+                <div id="normas" class="articulo">
+                    <button class="cerrar" onclick="cerrar(event)">×</button>
+                    <b>Normas generales</b>
+                    <p>Trabajando en ellas aún.</p>
+                </div>
+
+                <div id="licencia" class="articulo" style="display:none;">
+                    <button class="cerrar" onclick="cerrar(event)">×</button>
+                    <h2>Régimen de Licenciamiento</h2>
+                    <b>Régimen de Licenciamiento — North Star Software (NSS)</b>
+                    <p><i>Documentación oficial emitida por North Star Software.</i></p>
+
+                    <p><b>1. Definiciones</b></p>
+                    <p>A los efectos del presente Régimen de Licenciamiento, se establecen las siguientes definiciones:</p>
+                    <p>• <b>Software:</b> cualquier programa, módulo, componente, código fuente o binario, documentación, librería, instaladores o archivos relacionados desarrollados y distribuidos por North Star Software (NSS).</p>
+                    <p>• <b>Licencia:</b> autorización limitada, no exclusiva e intransferible otorgada por NSS para el uso del Software, conforme a los términos y condiciones del presente régimen y del contrato aplicable.</p>
+                    <p>• <b>Usuario o Licenciatario:</b> la persona física o jurídica que adquiere una licencia válida para el uso del Software.</p>
+                    <p>• <b>Clave/Archivo de licencia:</b> cualquier mecanismo, fichero (por ejemplo license.json), token, llave criptográfica o procedimiento empleado para validar el derecho de uso del Software.</p>
+                    <p>• <b>Modificación no autorizada:</b> cualquier acción destinada a alterar, obviar, neutralizar o eludir el mecanismo de protección/licenciamiento del Software.</p>
+
+                    <p><b>2. Alcance de la licencia</b></p>
+                    <p>• NSS concede al Licenciatario una licencia limitada, revocable, no exclusiva e intransferible para instalar y usar el Software de acuerdo con lo pactado en el acuerdo de venta y conforme a la documentación oficial.</p>
+                    <p>• La licencia se otorga exclusivamente para los fines, el número de usuarios/dispositivos y el período temporal especificados en el acuerdo de licencia. Todo uso fuera de ese alcance requiere autorización previa y por escrito de NSS.</p>
+
+                    <p><b>3. Restricciones de uso (prohibiciones)</b></p>
+                    <p>Queda terminantemente prohibido, salvo autorización expresa por escrito de NSS:</p>
+                    <p>• Reproducir, distribuir, sublicenciar, alquilar, arrendar, prestar o transferir el Software a terceros.</p>
+                    <p>• Hacer ingeniería inversa, descompilar, desensamblar, parcial o totalmente, traducir o crear trabajos derivados basados en el Software, salvo en los casos expresamente permitidos por la ley aplicable y con notificación previa a NSS.</p>
+                    <p>• Eludir, desactivar, manipular, modificar o interferir con cualquier medida de protección, control de acceso o sistema de licenciamiento implementado en el Software.</p>
+                    <p>• Crear, usar o distribuir copias no autorizadas, cracks, parches, keygens, loaders, activadores u otros medios destinados a piratear o vulnerar el Software.</p>
+                    <p>• Modificar, ocultar, eliminar o falsificar cualquier indicación de propiedad intelectual, avisos de copyright o marcas del Software.</p>
+                    <p>• Realizar ingeniería inversa con la finalidad de desarrollar productos que compitan directamente con NSS o que reproduzcan funcionalidades protegidas.</p>
+                    <p>• Transferir, vender o ceder la licencia sin la autorización previa y escrita de NSS.</p>
+
+                    <p><b>4. Mecanismos de protección y validación</b></p>
+                    <p>• El Software puede incorporar mecanismos criptográficos de firma digital, archivos de licencia (por ejemplo license.json), comprobaciones en línea y/o validaciones periódicas contra servidores de NSS.</p>
+                    <p>• El Licenciatario se compromete a no interferir con dichos mecanismos ni a emplear medios para su neutralización. NSS podrá requerir la verificación de la validez de la licencia en cualquier momento.</p>
+
+                    <p><b>5. Auditorías y verificación</b></p>
+                    <p>• NSS se reserva el derecho de verificar, mediante notificación razonable, el cumplimiento del presente régimen. Dicha verificación podrá realizarse de forma remota o, cuando sea necesario, mediante auditoría in situ.</p>
+                    <p>• Si la auditoría revela un uso no autorizado, el Licenciatario deberá, a primera solicitud, corregir la situación, asumir los costos de la auditoría y abonar las licencias correspondientes y/o penalidades estipuladas.</p>
+
+                    <p><b>6. Incumplimientos y sanciones</b></p>
+                    <p>• La reproducción, distribución, manipulación o elusión no autorizada del Software constituye una violación grave del presente régimen y de los derechos de propiedad intelectual de NSS.</p>
+                    <p>• En caso de incumplimiento, NSS podrá:</p>
+                    <p> o Suspender o revocar la licencia de forma inmediata.</p>
+                    <p> o Exigir la eliminación o devolución de todas las copias no autorizadas.</p>
+                    <p> o Reclamar el pago de daños y perjuicios, incluidos honorarios legales y costos de auditoría.</p>
+                    <p> o Iniciar las acciones civiles y/o penales que correspondan ante las autoridades competentes.</p>
+                    <p>• Las sanciones económicas por cada incidente de uso no autorizado serán las previstas en el acuerdo de venta; a falta de previsión, NSS podrá reclamar una compensación equivalente al valor de mercado de la licencia y daños adicionales.</p>
+
+                    <p><b>7. Notificación y manejo de vulnerabilidades</b></p>
+                    <p>• Si el Licenciatario detecta una vulnerabilidad, fallo o posibilidad de elusión en el mecanismo de licenciamiento, deberá notificarlo inmediatamente a NSS a la dirección de contacto indicada en el contrato y abstenerse de explotarla.</p>
+                    <p>• NSS se compromete a investigar y, cuando corresponda, publicar una corrección o actualización en un plazo razonable.</p>
+
+                    <p><b>8. Actualizaciones y mantenimiento</b></p>
+                    <p>• NSS podrá ofrecer actualizaciones, parches y nuevas versiones del Software. Estas estarán sujetas a los términos de la licencia y, según el caso, podrán requerir renovación de la licencia o pago adicional.</p>
+                    <p>• Las actualizaciones destinadas a corregir vulnerabilidades de seguridad o a mejorar mecanismos de protección podrán ser obligatorias para mantener la validez de la licencia.</p>
+
+                    <p><b>9. Garantías, limitación de responsabilidad y descargo</b></p>
+                    <p>• NSS garantiza que, en la fecha de entrega, el Software se ajusta sustancialmente a la documentación suministrada y que la licencia permitirá al Licenciatario utilizar el Software conforme a lo pactado.</p>
+                    <p>• Salvo que la ley aplicable disponga lo contrario, NSS niega expresamente cualquier otra garantía, ya sea expresa o implícita, incluidas las garantías de comerciabilidad, idoneidad para un fin particular y no infracción.</p>
+                    <p>• En ningún caso NSS será responsable por daños indirectos, especiales, incidentales o consecuentes (por ejemplo, pérdida de beneficios, ahorro esperado o datos), salvo disposición legal imperativa.</p>
+
+                    <p><b>10. Indemnización</b></p>
+                    <p>• El Licenciatario se obliga a indemnizar y mantener indemne a NSS frente a cualquier reclamo, daño, pérdida, costo o gasto (incluidos honorarios razonables de abogados) que surja del uso no autorizado del Software, de la modificación de licencias o de la violación del presente régimen.</p>
+
+                    <p><b>11. Transferencia y cesión</b></p>
+                    <p>• La licencia es intransferible, salvo autorización previa y por escrito de NSS y cumplimiento de las condiciones que NSS establezca (por ejemplo, pago de tasas administrativas o formalización de traspaso).</p>
+                    <p>• Cualquier intento de cesión sin cumplimiento de estos requisitos será nulo y facultará a NSS a revocar la licencia.</p>
+
+                    <p><b>12. Terminación</b></p>
+                    <p>• NSS podrá terminar o suspender la licencia de forma inmediata, sin perjuicio de otras acciones legales, si detecta:</p>
+                    <p> o Uso no autorizado o distribución ilegal del Software.</p>
+                    <p> o Manipulación o elusión de los mecanismos de licenciamiento.</p>
+                    <p> o Incumplimiento grave de las obligaciones del Licenciatario.</p>
+                    <p>• A la terminación, el Licenciatario deberá dejar de usar el Software y eliminar o devolver todas las copias, incluidas las copias de seguridad, salvo que se acuerde lo contrario por escrito.</p>
+
+                    <p><b>13. Cumplimiento legal y aplicación de la ley</b></p>
+                    <p>• El presente Régimen se interpreta y aplica de conformidad con las leyes de la jurisdicción acordada en el contrato de licencia. Para cualquier controversia derivada del presente régimen, las partes se someten a la jurisdicción de los tribunales competentes establecidos en dicho acuerdo, salvo disposición en contrario.</p>
+
+                    <p><b>14. Medidas ante pirateo y delitos informáticos</b></p>
+                    <p>• NSS denunciará ante las autoridades competentes toda conducta que constituya delito informático, piratería, fraude, acceso no autorizado o cualquier acción destinada a vulnerar la protección del Software.</p>
+                    <p>• El Licenciatario acepta colaborar con las investigaciones y poner a disposición de NSS la información razonablemente solicitada en caso de incidentes.</p>
+
+                    <p><b>15. Tarifas por incumplimiento</b></p>
+                    <p>• Además del pago por licencias faltantes y daños, NSS podrá aplicar tarifas administrativas y de remediación por cada incidente de manipulación o uso no autorizado, las cuales serán notificadas al Licenciatario y deberán abonarse en los plazos que NSS indique.</p>
+
+                    <p><b>16. Comunicaciones y contacto</b></p>
+                    <p>• Todas las comunicaciones relativas al presente régimen, reportes de vulnerabilidades o incidencias deberán dirigirse a:</p>
+                    <p><b>North Star Software – Legales / Soporte de Licencias</b><br>
+                    Contacto: <a href="mailto:nssoftware.soporte@gmail.com">nssoftware.soporte@gmail.com</a></p>
+
+                    <p><b>17. Disposiciones finales</b></p>
+                    <p>• Si alguna disposición de este Régimen fuera declarada nula, inválida o inaplicable, las demás disposiciones permanecerán en pleno vigor y efecto.</p>
+                    <p>• Este Régimen forma parte integrante del acuerdo de licencia y/o contrato de venta suscrito entre NSS y el Licenciatario.</p>
+
+                </div>
+
+                <div class="articulo" id="acuerdo">
+                    <button class="cerrar" onclick="cerrar(event)">×</button>
+                    <b>Acuerdo de Venta y Licenciamiento de Software</b>
+                    <p><strong>North Star Software (NSSoftware)</strong></p>
+
+                    <p>1. Entre <strong>North Star Software</strong>, en adelante “NSS”, representada por su agente autorizado, y <u>_____________________</u> DNI <u>______________</u>, en adelante “El Licenciatario”, se celebra el presente Acuerdo de Venta y Licenciamiento de Software, conforme a las siguientes cláusulas.</p>
+
+                    <p>2. El presente acuerdo tiene por objeto establecer las condiciones bajo las cuales el Licenciatario adquiere el derecho de uso del software desarrollado y distribuido por NSS, conforme al producto detallado en la cláusula siguiente, y en sujeción al <strong>Régimen de Licenciamiento de North Star Software</strong>, las <strong>Normas Generales de North Star Software</strong> y las <strong>Políticas de Servicio Postventa</strong> vigentes.</p>
+
+                    <p><strong>3. Detalle del producto</strong></p>
+                    <ul style="text-align:left;">
+                        <li>Producto adquirido: ______________________________</li>
+                        <li>Versión: ______</li>
+                        <li>Duración del licenciamiento: ______________________________</li>
+                        <li>Precio final: ______________________________</li>
+                        <li>Forma de pago: _______________</li>
+                        <li>Fecha de entrega: _______________</li>
+                    </ul>
+
+                    <p>4. El Licenciatario declara expresamente haber leído, comprendido y aceptado en su totalidad:</p>
+                    <ul style="text-align:left;">
+                        <li>Las <strong>Normas Generales de NSSoftware</strong>.</li>
+                        <li>El <strong>Régimen de Licenciamiento de North Star Software</strong>, incluyendo las disposiciones sobre uso autorizado, restricciones, protección de licencias, sanciones por manipulación o piratería, y demás condiciones legales.</li>
+                        <li>Las <strong>Políticas de Servicio Postventa</strong>, que regulan la asistencia técnica, mantenimiento gratuito y posibles costos adicionales por modificaciones o nuevas funciones.</li>
+                    </ul>
+
+                    <p>El Licenciatario reconoce que la violación de cualquiera de dichas normas podrá implicar la revocación inmediata de la licencia y las acciones legales correspondientes.</p>
+
+                    <p>5. Una vez firmado el presente acuerdo y efectuado el pago correspondiente, NSS procederá a generar la licencia oficial (<strong>license.json</strong>) de forma exclusiva y autenticada mediante su sistema de licenciamiento criptográfico.  
+                    El Licenciatario se compromete a no duplicar, compartir, alterar ni modificar el archivo de licencia ni el sistema de protección asociado.</p>
+
+                    <p>6. El presente acuerdo entrará en vigor a partir de la fecha de firma y permanecerá válido durante el período de licenciamiento establecido en la cláusula 3, salvo terminación anticipada por incumplimiento.  
+                    En caso de terminación o vencimiento, el Licenciatario deberá cesar el uso del software y eliminar todas las copias instaladas, salvo renovación o autorización expresa de NSS.</p>
+
+                    <p>7. Este acuerdo se regirá e interpretará conforme a las leyes vigentes de la República Argentina.  
+                    Para toda controversia derivada del mismo, las partes se someten a la jurisdicción de los tribunales competentes de la Ciudad de <u>__________________</u>.</p>
+
+                    <p>8. En prueba de conformidad, las partes firman el presente acuerdo en dos ejemplares de igual tenor y a un solo efecto.</p>
+                </div>
+
+            </div>
+
+            <p class="info">Si tenés quejas, opiniones o dudas sobre las políticas de la compañía, tomate la libertad de reportarlas a nuestro mail de soporte: <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSHxGpCGvQKwhttCZFVlbkDPFwGcLpsDkKTlRRqGRLLggQTCMDrKJNQdrRSkbVspSHskjHQV" target="_blank" style="color: #16e5ec;">nssoftware.soporte@gmail.com</a></p>
+
+        </section>
+
+    </div>
+    
+<footer>
+
+        <div class="seccion">
+            <section>
+                <p style="width: fit-content; font-size: 1.2rem; margin: 1rem 0;">North Star Software &copy;</p>
+                <p>Construimos futuro, facilitamos procesos. Optimizá tu negocio con nosotros y dale un soporte tecnológico.</p>
+            </section>
+
+            <section>
+
+                <b>Compañía</b>
+
+                <a href="sobrenosotros.html">Sobre nosotros</a>
+                <a href="index.html">Trabajos completados</a>
+                <a href="politicasylegal.html">Políticas y legal</a>
+                <a href="index.html">Trabajá con nosotros</a>
+            </section>
+        </div>
+
+        <div class="seccion">
+            <section>
+                <b>Soluciones</b>
+
+                <a href="cashreg.html">Cashreg</a>
+                <a href="gym.html">GGYM</a>
+                <a href="posko.html">POSKo Estándar</a>
+                <a href="poskopro.html">POSKo Pro</a>
+            </section>
+            
+            <section>
+                <b>Contacto</b>
+
+                <a><i class="fa-solid fa-envelope"></i> nssoftware.soporte@gmail.com</a>
+                <a><i class="fa-brands fa-instagram"></i> nssoftware_</a>
+                <a><i class="fa-solid fa-phone"></i> +54 9 264 512-8508</a>
+            </section>
+        </div>
+</footer>
+
+<script>
+    function mostrar(id)
+    {
+        document.getElementById('overlay').style.display = 'flex';
+        document.querySelectorAll('.articulo').forEach(el => el.style.display = 'none');
+        document.getElementById(id).style.display = 'block';
+        document.body.style.overflow = 'hidden'; // 🔒 bloquea el scroll
+    }
+    function cerrar(event) {
+        if (!event || event.target.id === 'overlay' || event.target.classList.contains('cerrar')) {
+            document.getElementById('overlay').style.display = 'none';
+            document.body.style.overflow = ''; // 🔒 bloquea el scroll
+        }
+    }
+</script>
+
+</body>
+</html>
