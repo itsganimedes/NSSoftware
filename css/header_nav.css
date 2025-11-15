@@ -24,13 +24,13 @@ header{
 }
 
 .home .header-nav{
-    padding: 18rem 5rem 4rem 5rem;
+    padding: 10rem 5rem 4rem 5rem;
 }
 
 @media (max-width: 1050px)
 {
     .home .header-nav{
-        padding: 14rem 0;
+        padding: 7rem 0;
     }
 }
 
