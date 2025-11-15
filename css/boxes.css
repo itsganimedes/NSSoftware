@@ -820,6 +820,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 4rem;
+    padding: 2rem 10rem;
 }
 
 .item{
@@ -878,6 +879,79 @@
     font-size: 1rem;
     color: #1d1d1d;
 }
+
+/* CALL TO ACTION CTA */
+
+.cta{
+    width: 25rem;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #1b1b1b;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta form{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 4rem 0 2rem 0;
+}
+
+
+.cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #fff, transparent);
+    transition: 0.4s;
+}
+
+.cta:hover::before {
+    left: 100%;
+}
+
+
+.cta form label{
+    color: #ccc;
+    font-size: 0.8rem;
+    margin-left: 0.2rem;
+}
+
+.cta input{
+    border-radius: 5px;
+    width: 18rem;
+    height: 2rem;
+    padding: 1.4rem 1rem;
+}
+
+.cta input[type="submit"]
+{
+    all: unset;
+    background: #8affc7;
+    width: 18rem;
+    padding: 0.7rem 0;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 2rem;
+    transition: 0.2s;
+}
+
+.cta input[type="submit"]:hover
+{
+    cursor: pointer;
+    transform: translateY(-0.1rem);
+    background: #7de9b5;
+}
+
+/* *************** */
 
 
 
