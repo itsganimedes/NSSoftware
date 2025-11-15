@@ -152,12 +152,16 @@
         <div class="cta">
             <p class="title">Hablemos.</p>
             <p style="text-align: center; margin-bottom: 2rem; font-size: 0.8rem;">Envíanos tus datos y nos comunicaremos en breve.</p>
-            <form action="POST">
-                <input name="inname" type="text" placeholder="Nombre" required>
-                <input name="inemail" type="email" placeholder="Email" required>
-                <input name="innum" type="number" placeholder="Número de teléfono">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="26c8883b-0908-4140-92fe-26d0e4439224">
+                
+                <input name="Nombre" type="text" placeholder="Nombre" required>
+                <input name="Correo Electrónico" type="email" placeholder="Email" required>
+                <input name="Número de Teléfono" type="number" placeholder="Número de teléfono">
+                
                 <input type="submit">
             </form>
+
         </div>
         <div class="img-form-atractivo">
             <video autoplay muted loop playsinline>
