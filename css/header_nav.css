@@ -23,6 +23,17 @@ header{
     overflow: hidden; /* para que el blur no se salga */
 }
 
+.home .header-nav{
+    padding: 18rem 5rem 4rem 5rem;
+}
+
+@media (max-width: 1050px)
+{
+    .home .header-nav{
+        padding: 14rem 0;
+    }
+}
+
 .header-nav::before {
     content: "";
     position: absolute;

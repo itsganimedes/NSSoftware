@@ -135,7 +135,7 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: #83bebe;
+    background: #8affc7;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgb(0, 0, 0,0.8);
 }
@@ -736,7 +736,8 @@
 
     .img-working{
         width: calc(100% + 7rem);
-        background-attachment: initial;
+        background-attachment: fixed;
+        background-repeat: repeat;
         height: 12rem;
         margin: -2rem -5rem 2rem -5rem;
         background-position: 30% -7rem;
