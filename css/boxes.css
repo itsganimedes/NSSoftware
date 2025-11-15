@@ -968,11 +968,6 @@
     transition: 0.4s;
 }
 
-.cta:hover::before {
-    left: 100%;
-}
-
-
 .cta form label{
     color: #ccc;
     font-size: 0.8rem;
