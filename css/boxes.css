@@ -1012,7 +1012,12 @@
 
     .form-atractivo .img-form-atractivo {
         width: 25rem;
-        display: none;
+        margin: 0;
+        position: absolute;
+    }
+
+    .form-atractivo .img-form-atractivo video {
+
     }
 
     .cta{
@@ -1021,7 +1026,7 @@
         background: transparent;
     }
 
-    .cta::before{
+    /* .cta::before{
         content: '';
         width: 25rem;
         height: 34rem;
@@ -1033,11 +1038,9 @@
         position: absolute;
         top: 0;
         left: 0;
-    }
+    } */
 
-    .form-atractivo .img-form-atractivo video {
-        display: none;
-    }
+
 }
 
 /* *************** */
