@@ -976,7 +976,8 @@
 }
 
 .cta input{
-    border-radius: 5px;
+    border-radius: 15px;
+    border: none;
     width: 18rem;
     height: 2rem;
     padding: 1.4rem 1rem;
@@ -1001,6 +1002,7 @@
     background: #7de9b5;
 }
 
+
 @media (max-width: 1050px)
 {
     .form-atractivo{
@@ -1014,10 +1016,6 @@
         width: 25rem;
         margin: 0;
         position: absolute;
-    }
-
-    .form-atractivo .img-form-atractivo video {
-
     }
 
     .cta{
