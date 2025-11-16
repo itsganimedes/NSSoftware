@@ -957,6 +957,9 @@
     padding: 4rem 0 2rem 0;
 }
 
+.cta:hover::before{
+    left: 100%;
+}
 
 .cta::before {
     content: "";
