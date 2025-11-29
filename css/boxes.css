@@ -528,16 +528,26 @@
 
 .producto{
     width: 20rem;
-    height: 20rem;
-    padding: 1rem;
+    height: 28rem;
+    padding: 2rem 2rem;
     border-radius: 10px;
-    background: #141414;
     color: #ccc;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
     z-index: 0;
+}
+
+.producto_img{
+    width: 7rem;
+    height: 7rem;
+    background: rgb(9, 0, 51);
+    background-position: 0rem 0.1rem;
+    box-shadow: 0px 4px 6px rgb(0,0,0,0.8);
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 auto;
 }
 
 .producto::before{
@@ -551,7 +561,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    filter: blur(9px);
+    filter: blur(1px);
     z-index: -1;
 }
 
@@ -571,6 +581,11 @@
 
 .producto:hover::before{
     background: linear-gradient(rgb(0, 134, 151), rgb(182, 50, 194));
+    filter: blur(9px);
+}
+
+.producto:hover .producto_img{
+    transform: scale(1.05);
 }
 
 .producto a {
