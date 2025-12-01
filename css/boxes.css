@@ -169,8 +169,10 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    margin: 2rem 0 5rem 0;
+
     flex-wrap: wrap;
+    max-width: 70%;
+    margin: 2rem auto;
 }
 
 .member{
