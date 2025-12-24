@@ -624,6 +624,7 @@
     list-style: none;
     display: flex;
     flex-direction: row;
+    gap: 3rem;
     align-items: flex-start;
     justify-content: center;
 }
@@ -1072,4 +1073,8 @@
         gap: 3rem;
         padding: 0;
     }
+}
+
+#container-caracteristicas{
+    width: 100%;
 }
