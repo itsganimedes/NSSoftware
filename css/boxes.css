@@ -660,7 +660,8 @@
 .techs{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    flex-wrap: wrap;
+    width: 80%;
     gap: 3rem;
     align-items: center;
     justify-content: center;
