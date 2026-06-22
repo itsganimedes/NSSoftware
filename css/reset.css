@@ -73,6 +73,10 @@ a:hover{
     text-align: justify;
 }
 
+.centered{
+    text-align: center;
+}
+
 p{
     color: #ccc;
 }

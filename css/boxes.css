@@ -118,17 +118,17 @@
 
 /* MANTENIMIENTOS (MNTS) */
 
-.mnts{
+.mnts {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem; /* Un toque más de espacio entre tarjetas */
     margin: 2rem 0 5rem 0;
     flex-wrap: wrap;
 }
 
-.mnt{
+.mnt {
     width: 10rem;
     height: 10rem;
     display: flex;
@@ -136,32 +136,52 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: #8affc7;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgb(0, 0, 0,0.8);
+    
+    /* Mejoras estéticas */
+    background: #e6fcf5; /* Un verde pastel mucho más limpio y moderno */
+    border: 1px solid #c3fae8; /* Borde sutil para darle definición */
+    border-radius: 16px; /* Bordes un poco más redondeados (estilo actual) */
+    
+    /* Corregido el rgb() que tenía 4 valores, ahora con un efecto sutil y elegante */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.04);
+    
+    /* Crucial: Transición suave para que el hover no sea brusco */
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
-.mnt:hover{
-    transform: scale(1.05);
+/* Efectos de Hover potenciados */
+.mnt:hover {
+    transform: translateY(-5px) scale(1.02); /* Sube un poquito además de agrandarse */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* La sombra acompaña el movimiento */
+    background: #c3fae8; /* Cambia ligeramente el fondo al pasar el mouse */
 }
 
-.mnt:hover i{
-    transform: rotate(10deg);
+.mnt p {
+    color: #1a1a1a;
+    font-weight: 600; /* Un poco más de peso al texto */
+    font-size: 0.95rem;
+    margin: 0; /* Evita que márgenes por defecto rompan el centrado */
 }
 
-.mnt p{
-    color: #141414;
-}
-
-.mnt i{
-    font-size: 2rem;
+.mnt i {
+    font-size: 1.8rem;
     padding: 1rem;
-    background: white;
+    background: #ffffff;
     border-radius: 50%;
-    margin: 1rem 0;
-    border: 1px solid #141414;
+    margin-bottom: 0.5rem;
+    color: #0ca678; /* El icono toma el protagonismo con el color de la marca */
+    
+    /* Sombra interna sutil para el icono en vez de un borde negro duro */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
+    
+    /* Transición para la rotación */
+    transition: transform 0.3s ease;
 }
 
+.mnt:hover i {
+    transform: rotate(12deg) scale(1.1); /* Gira y se agranda un pelín */
+}
 /* EQUIPO (team) */
 
 .team{
@@ -176,6 +196,7 @@
 }
 
 .member{
+    flex: 1;
     width: 15rem;
     height: 20rem;
     display: flex;
@@ -645,35 +666,50 @@
     margin-top: 2rem;
 }
 
-.tech{
+.tech {
     display: flex;
     flex-direction: column;
-    width: 100%;
     align-items: center;
     justify-content: center;
-    padding: 5rem 0;
-    background: #141414;
+    padding: 6rem 0;
+    background: #121212;
     width: calc(100% + 8rem);
     margin: 5rem -4rem 0 -4rem;
+    
+    border-top: 1px solid rgba(255, 255, 255, 0.05); 
+    box-sizing: border-box;
 }
 
-.techs{
+.techs {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 80%;
-    gap: 3rem;
+    width: 100%;
+    gap: 4rem;
     align-items: center;
     justify-content: center;
 }
 
-.tech img{
-    max-width: 14rem;
+.tech img {
+    max-width: 8rem;
+    height: auto;
+    
+    filter: grayscale(100%) opacity(0.6); 
+    
+    transition: 
+        transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), 
+        filter 0.3s ease,
+        drop-shadow 0.3s ease;
 }
 
-.tech img:hover{
-    transform: translateY(-0.5rem) rotate(7deg);
-} 
+/* 🔥 Efecto Hover Potenciado */
+.tech img:hover {
+    filter: grayscale(0%) opacity(1); 
+    
+    transform: translateY(-0.8rem) scale(1.08) rotate(4deg);
+    
+    filter: drop-shadow(0 8px 24px rgba(255, 255, 255, 0.15));
+}
 
 .img-info{
     display: flex;
@@ -814,16 +850,34 @@
         width: 10rem;
     }
 
+    .tech {
+        padding: 3.5rem 0; 
+        width: calc(100% + 4rem);
+        margin: 3rem -2rem 0 -2rem;
+    }
+
+    .techs {
+        width: 90%;
+        gap: 1.8rem;
+    }
+
+    .tech img {
+        max-width: 4.5rem;
+        filter: grayscale(30%) opacity(0.8); 
+    }
+
+    .tech img:hover {
+        transform: scale(1.05);
+        filter: grayscale(0%) opacity(1);
+        filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.1));
+    }
+
     .tech{
         margin: 0;
         width: 100%;
     }
 
-    .techs{
-        flex-direction: column;
-        padding: 2rem;
-    }
-
+    
     .img-info{
         padding: 3rem 3rem;
         flex-direction: column;
@@ -1080,13 +1134,13 @@
     }
 
     .form-atractivo .img-form-atractivo {
-        width: 25rem;
+        width: 90%;
         margin: 0;
         position: absolute;
     }
 
     .cta{
-        width: 25rem;
+        width: 100%;
         position: relative;
         background: transparent;
     }
