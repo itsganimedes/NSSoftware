@@ -1078,11 +1078,20 @@
     background: #7de9b5;
 }
 
-.pag_web_box{
+.pages_box{
+    display: flex;
+    flex-direction: row;
     width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pag_web_box{
+    width: 45%;
     display: block;
     padding: 1rem;
-    margin: 1rem 0;
+    margin: 1rem auto;
     border: 1px solid #eee;
     border-radius: 4px;
     color: #eee !important;
@@ -1126,6 +1135,14 @@
 
 @media (max-width: 1050px)
 {
+    .pages_box{
+        flex-direction: column;
+    }
+
+    .pag_web_box{
+        width: 100%;
+    }
+
     .member{
         flex: auto;
     }
