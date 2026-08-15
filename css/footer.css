@@ -3,7 +3,7 @@ footer{
     text-align: left;
     position: relative;
     margin: 5rem 0 0 0;
-    background: #151b1f;
+    background: var(--background-darker);
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -49,7 +49,7 @@ footer a{
     width: 40rem;
     height: 20rem;
     border-radius: 50%;
-    background: #151b1f;
+    background: var(--background-darker);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -12%);

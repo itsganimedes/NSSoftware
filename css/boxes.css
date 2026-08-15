@@ -62,14 +62,14 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
-    max-width: 70%;
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .caracteristica{
     width: 22rem;
     height: 15rem;
-    background: #1f292e;
+    background: var(--card);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -560,6 +560,7 @@
     justify-content: space-between;
     position: relative;
     z-index: 0;
+    background: var(--card);
 }
 
 .producto_img{
@@ -594,7 +595,7 @@
     width: 100%;
     height: 100%;
     border-radius: inherit;
-    background: #141414;
+    background: var(--card);
     inset: 3px;
     top: 50%;
     left: 50%;
@@ -672,7 +673,7 @@
     align-items: center;
     justify-content: center;
     padding: 6rem 0;
-    background: #121212;
+    background: var(--background-darker);
     width: calc(100% + 8rem);
     margin: 5rem -4rem 0 -4rem;
     
@@ -702,7 +703,7 @@
         drop-shadow 0.3s ease;
 }
 
-/* 🔥 Efecto Hover Potenciado */
+
 .tech img:hover {
     filter: grayscale(0%) opacity(1); 
     
@@ -771,7 +772,7 @@
     width: fit-content;
     padding: 1rem 2rem;
     border-radius: 10px;
-    background: #1f292e;
+    background: var(--card);
 }
 
 .selectitem p{
@@ -914,8 +915,8 @@
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 4rem;
-    padding: 2rem 10rem;
+    gap: 1rem;
+    padding: 2rem;
 }
 
 .item{
@@ -923,11 +924,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 15rem;
-    height: 11rem;
+    width: 12rem;
+    height: 15rem;
     background:#ccc;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 2rem;
     position: relative;
     z-index: 0;
@@ -975,6 +976,15 @@
     color: #1d1d1d;
 }
 
+.item i{
+    color: #000000;
+    font-size: 2rem;
+}
+
+.item b{
+    font-size: 1.2rem;
+}
+
 /* FORM ATRACTIVO */
 
 .form-atractivo{
@@ -1010,7 +1020,7 @@
 .cta{
     width: 35rem;
     height: 34rem;
-    background: #1b1b1b;
+    background: var(--card);
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -1145,6 +1155,10 @@
 
     .member{
         flex: auto;
+    }
+
+    .producto{
+        width: 100%;
     }
 
     .form-atractivo{

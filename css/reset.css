@@ -1,3 +1,9 @@
+:root{
+    --background-color: #05000f;
+    --background-darker: #000;
+    --card: #0a011d;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,8 +12,8 @@
 }
 
 body{
-    font-family:sans-serif;
-    background: linear-gradient(0deg, #1f292e, #151b1f);
+    font-family: sans-serif;
+    background: linear-gradient(0deg, var(--background-color), #060013);
     text-align: justify;
 }   
 
