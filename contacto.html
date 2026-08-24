@@ -14,17 +14,25 @@
 <body>
     <div id="container">
         <div class="header-nav">
-            <header>
-                <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
-                <h1><span>NSSoftware</span></h1>
-            </header>
+            <header class="navbar">
+                <div class="brand">
+                    <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
+                    <h1><span>NSSoftware</span></h1>
+                </div>
 
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="productos.html">Productos</a>
-                <a href="info.html">Información</a>
-                <a href="contacto.html" style="color: #77adb1;">Contacto</a>
-            </nav>
+                <button class="burger-menu" id="burger-btn" aria-label="Abrir menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <nav class="nav-links" id="nav-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="info.html">Cómo Funciona</a>
+                    <a href="contacto.html" class="active">Contacto</a>
+                </nav>
+            </header>
         </div>
 
         <section class="contenido" style="color: #ccc;">
@@ -34,26 +42,43 @@
             <p class="info">Comunicate con nosotros y te ayudamos a desarrollar una solución para tu necesidad.</p>
             <br>
             <div class="contacto">
-                <ul>
-                    <li>
-                        <i class="fa-solid fa-location-dot" style="color: rgb(206, 46, 46)"></i>
+                <ul class="contacto-list">
+                    <li class="contacto-item">
+                        <div class="icon-box location">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
                         <p>San Juan, Argentina</p>
                     </li>
-                    <!-- <li>
-                        <i class="fa-brands fa-whatsapp" style="color: rgb(118, 211, 89)"></i>
-                        <p>264 512 8508</p>
-                    </li> -->
-                    <li>
-                        <i class="fa-solid fa-envelope" style="color: rgb(182, 131, 216)"></i>
-                        <p>nssoftware.soporte@gmail.com</p>
+
+                    <li class="contacto-item">
+                        <a href="mailto:nssoftware.soporte@gmail.com" class="contacto-link">
+                            <div class="icon-box email">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <p>nssoftware.soporte@gmail.com</p>
+                        </a>
                     </li>
-                    <li>
-                        <i class="fa-brands fa-instagram" style="color: rgb(216, 182, 131)"></i>
-                        <p>@nssoftware_</p>
+
+                    <li class="contacto-item">
+                        <a href="https://instagram.com/nssoftware_" target="_blank" rel="noopener noreferrer" class="contacto-link">
+                            <div class="icon-box instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </div>
+                            <p>@nssoftware_</p>
+                        </a>
+                    </li>
+
+                    <li class="contacto-item">
+                        <a href="https://www.facebook.com/marketplace/profile/100092311122313/" target="_blank" rel="noopener noreferrer" class="contacto-link">
+                            <div class="icon-box facebook">
+                                <i class="fa-brands fa-facebook"></i>
+                            </div>
+                            <p>@nssoftware_</p>
+                        </a>
                     </li>
                 </ul>
             </div>
-            
+                        
             <br>
             <b class="info">Horarios de atención: Lunes a Viernes 09hs a 14hs</b>
             <p class="info">¡Esperamos tu consulta!</p>
@@ -97,5 +122,6 @@
             </section>
         </div>
     </footer>
+<script src="js/burger_menu.js"></script>
 </body>
 </html>

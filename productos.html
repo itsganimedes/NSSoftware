@@ -15,17 +15,25 @@
     <div id="container">
 
         <div class="header-nav">
-            <header>
-                <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
-                <h1><span>NSSoftware</span></h1>
-            </header>
+            <header class="navbar">
+                <div class="brand">
+                    <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
+                    <h1><span>NSSoftware</span></h1>
+                </div>
 
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="productos.html" style="color: #77adb1;">Productos</a>
-                <a href="info.html">Información</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
+                <button class="burger-menu" id="burger-btn" aria-label="Abrir menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <nav class="nav-links" id="nav-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html" class="active">Productos</a>
+                    <a href="info.html">Cómo Funciona</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </header>
         </div>
 
         <section class="contenido">
@@ -63,7 +71,7 @@
                         <p class="producto-title"><i class="fa-solid fa-desktop"></i> POSKo</p>
                         <div class="producto_img" style="background-image: url('img/POSKo/Inicio.png');"></div>
                         <p class="producto-desc">POSKo es un sistema de punto de venta simple y eficiente, diseñado especialmente para pequeños y medianos negocios que buscan una herramienta práctica y estable. POSKo es compatible con lectores de código barra. Ofrece funciones avanzadas de gestión, tales como conexión remota a un servidor en línea, roles empleado-admin personalizables e integración con impresoras térmicas para generar tickets como comprobantes de venta.</p>
-                        <p style="color: green;" id="p_poskoe">USD 24</p>
+                        <p style="color: green;" id="p_poskoe">USD 26</p>
                         <a href="posko.html"><i class="fa-solid fa-eye"></i> Ver</a>
                     </article>
 
@@ -124,5 +132,6 @@
     </footer>
 
     <script src="./js/setprices.js"></script>
+<script src="js/burger_menu.js"></script>
 </body>
 </html>

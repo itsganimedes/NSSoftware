@@ -15,34 +15,41 @@
     <div id="container">
 
         <div class="header-nav">
-            <header>
-                <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
-                <h1><span>NSSoftware</span></h1>
-            </header>
+            <header class="navbar">
+                <div class="brand">
+                    <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
+                    <h1><span>NSSoftware</span></h1>
+                </div>
 
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="productos.html">Productos</a>
-                <a href="info.html">Información</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
+                <button class="burger-menu" id="burger-btn" aria-label="Abrir menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <nav class="nav-links" id="nav-links">
+                    <a href="index.html" class="active">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="info.html">Cómo Funciona</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </header>
         </div>
 
         <section class="contenido">
             <p class="title-4">Sobre Nosotros</p>
 
-            <p class="title-5">Historia</p>
-
-            <p class="info">Somos una agencia de programación y diseño especializada en el sector.</p>
-            <p class="info">Nuestro negocio comenzó en los 2000's solo con servicios de reparaciones de computadoras y aún se mantiene de pie.</p>
-            <p class="info">Con el tiempo, se recibió e integró nuestra diseñadora gráfica, incorporando nuevos servicios y posibilidades al negocio.</p>
-            <p class="info">Finalmente, sumamos la programación y las ventas.</p>
-            <br>
-            <p class="info">A día de hoy, NSSoftware está asociado con Serdigital y funcionan juntos, brindando presencia en el mercado como una <b style="color: #77adb1;">agencia de servicio técnico físico y digital y de diseño profesional</b>.</p>
-            <br>
-            <p class="info">Amamos lo que hacemos. Vamos a seguir creciendo con la fé puesta en Dios.</p>
-            <br>
-            <p class="info">¡Te invitamos a ser parte de este crecimiento!</p>
+            <div class="our_story">
+                <div class="os_1">
+                    <p class="title-5">Historia</p>
+                </div>
+                <div class="os_2">
+                    <p class="info">Somos una agencia de programación y diseño especializada en el sector.</p>
+                    <p class="info">A día de hoy, NSSoftware está asociado con Serdigital y funcionan juntos, brindando presencia en el mercado como una <b>agencia de servicio técnico físico y digital y de diseño profesional</b>.</p>
+                    <p class="info">Amamos lo que hacemos. Vamos a seguir creciendo con la fé puesta en Dios.</p>
+                    <p class="info">¡Te invitamos a ser parte de este crecimiento!</p>
+                </div>
+            </div>
 
             <p class="title-5">Equipo</p>
 
@@ -201,5 +208,6 @@
             </section>
         </div>
     </footer>
+<script src="js/burger_menu.js"></script>
 </body>
 </html>

@@ -14,22 +14,30 @@
 <body>
     <div id="container">
         <div class="header-nav">
-            <header>
-                <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
-                <h1><span>NSSoftware</span></h1>
-            </header>
+            <header class="navbar">
+                <div class="brand">
+                    <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
+                    <h1><span>NSSoftware</span></h1>
+                </div>
 
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="productos.html">Productos</a>
-                <a href="info.html" style="color: #77adb1;">Información</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
+                <button class="burger-menu" id="burger-btn" aria-label="Abrir menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <nav class="nav-links" id="nav-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="info.html" class="active">Cómo Funciona</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </header>
         </div>
 
         <section class="contenido">
-            <p class="title-4">Información sobre nosotros</p>
-            <p class="info">NSSoftware es una productora de software. Nos enfocamos en el desarollo de programas a medida, con adaptaciones a pedido del Usuario. Trabajamos con bases de datos y negocios locales. Nuestra misión es lograr que nuestros Usuarios consigan una mejor organización en el desempeño diario y mensual de sus negocios.</p>
+            <p class="title-4">Cómo Funciona</p>
+            <p class="info">El objetivo es servirte. Si no te facilita el desarrollo diario, no está terminado.</p>
             <p class="info">Trabajamos con las siguientes características:</p>
             <div class="items">
                 <div class="item">
@@ -98,5 +106,6 @@
             </section>
         </div>
     </footer>
+<script src="js/burger_menu.js"></script>
 </body>
 </html>

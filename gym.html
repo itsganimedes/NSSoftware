@@ -15,17 +15,25 @@
 <body>
     <div id="container">
         <div class="header-nav">
-            <header>
-                <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
-                <h1><span>NSSoftware</span></h1>
-            </header>
+            <header class="navbar">
+                <div class="brand">
+                    <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
+                    <h1><span>NSSoftware</span></h1>
+                </div>
 
-            <nav>
-                <a href="index.html">Inicio</a>
-                <a href="productos.html" style="color: #77adb1;">Productos</a>
-                <a href="info.html">Información</a>
-                <a href="contacto.html">Contacto</a>
-            </nav>
+                <button class="burger-menu" id="burger-btn" aria-label="Abrir menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <nav class="nav-links" id="nav-links">
+                    <a href="index.html" class="active">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="info.html">Cómo Funciona</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </header>
         </div>
         
         <main>
@@ -124,5 +132,6 @@
     </footer>
 
     <script src="./js/setprices.js"></script>
+<script src="js/burger_menu.js"></script>
 </body>
 </html>
