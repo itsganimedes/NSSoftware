@@ -137,45 +137,34 @@
     justify-content: center;
     text-align: center;
     
-    /* Mejoras estéticas */
-    background: #e6fcf5; /* Un verde pastel mucho más limpio y moderno */
-    border: 1px solid #c3fae8; /* Borde sutil para darle definición */
-    border-radius: 16px; /* Bordes un poco más redondeados (estilo actual) */
-    
-    /* Corregido el rgb() que tenía 4 valores, ahora con un efecto sutil y elegante */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 4px 6px rgba(0, 0, 0, 0.04);
     
-    /* Crucial: Transición suave para que el hover no sea brusco */
     transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;
     cursor: pointer;
 }
 
-/* Efectos de Hover potenciados */
 .mnt:hover {
-    transform: translateY(-5px) scale(1.02); /* Sube un poquito además de agrandarse */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); /* La sombra acompaña el movimiento */
-    background: #c3fae8; /* Cambia ligeramente el fondo al pasar el mouse */
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .mnt p {
-    color: #1a1a1a;
-    font-weight: 600; /* Un poco más de peso al texto */
+    color: #f0f0f0;
+    font-weight: 600;
     font-size: 0.95rem;
-    margin: 0; /* Evita que márgenes por defecto rompan el centrado */
+    margin: 0;
 }
 
 .mnt i {
     font-size: 1.8rem;
     padding: 1rem;
-    background: #ffffff;
+    background: var(--background-darker);
     border-radius: 50%;
     margin-bottom: 0.5rem;
-    color: #0ca678; /* El icono toma el protagonismo con el color de la marca */
+    color: var(--texts_icons);
     
-    /* Sombra interna sutil para el icono en vez de un borde negro duro */
     box-shadow: 0 2px 4px rgba(0,0,0,0.05); 
     
-    /* Transición para la rotación */
     transition: transform 0.3s ease;
 }
 
@@ -553,7 +542,7 @@
     width: 20rem;
     height: 28rem;
     padding: 2rem 2rem;
-    border-radius: 10px;
+    border-radius: 20px;
     color: #ccc;
     display: flex;
     flex-direction: column;
@@ -742,25 +731,82 @@
     opacity: 0.5;
 }
 
-.ad {
-    background: url("../img/Ads.png") repeat-x;
-    background-position: 0 center; 
-    height: 15rem;
+/* --- BANNER FUTURISTA --- */
+.tech-banner {
+    position: relative;
+    width: 100%;
+    height: 80px; /* Ajustá la altura según tu diseño */
+    margin: 2rem 0;
+    background-color: var(--card);
+    border: 1px solid rgba(43, 184, 250, 0.2);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    animation: toleft 10s linear infinite; 
-    animation-direction: alternate;
-    width: calc(100% + 12rem);
-    margin: 5rem -6rem;
+    box-shadow: 0 0 15px rgba(5, 0, 15, 0.8), inset 0 0 15px rgba(43, 184, 250, 0.05);
 }
 
-@keyframes toleft {
-    0% {
-        background-position: 0 center;
-    }
-    100% {
-        background-position: -100% center; /* mueve la imagen completa hacia la izquierda */
-    }
+/* Texto del banner */
+.banner-content {
+    font-family: 'Courier New', Courier, monospace; /* Tipografía estilo código */
+    font-size: 1.1rem;
+    color: var(--texts_icons);
+    text-shadow: 0 0 8px rgba(43, 184, 250, 0.6);
+    z-index: 2;
+    letter-spacing: 1px;
+    margin: 2rem;
 }
+
+.tech-prefix {
+    opacity: 0.6;
+    margin-right: 8px;
+}
+
+/* Cursor titilante */
+.cursor {
+    display: inline-block;
+    color: var(--texts_icons);
+    animation: blink 0.8s infinite;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+
+.scanline {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(43, 184, 250, 0.15), transparent);
+    animation: scan 4s linear infinite;
+    z-index: 1;
+}
+
+@keyframes scan {
+    0% { left: -50%; }
+    100% { left: 150%; }
+}
+
+
+.glow-line {
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--texts_icons), transparent);
+    opacity: 0.5;
+}
+
+.glow-line.top { top: 0; }
+.glow-line.bottom { bottom: 0; }
+
+
 
 .selectitem{
     display: flex;
@@ -1179,20 +1225,6 @@
         position: relative;
         background: transparent;
     }
-
-    /* .cta::before{
-        content: '';
-        width: 25rem;
-        height: 34rem;
-        background: url(../img/products-image.jpg);
-        background-position: center;
-        background-size: cover;
-        opacity: 50%;
-        z-index: -1;
-        position: absolute;
-        top: 0;
-        left: 0;
-    } */
 
 
 }

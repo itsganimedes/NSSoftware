@@ -2,6 +2,7 @@
     --background-color: #05000f;
     --background-darker: #000;
     --card: #0a011d;
+    --texts_icons: #2bb8fa;
 }
 
 *{
@@ -81,7 +82,10 @@ a:hover{
 
 .centered{
     text-align: center;
+    max-width: 70%;
+    margin: 0 auto;
 }
+
 
 p{
     color: #ccc;
@@ -112,5 +116,9 @@ ul{
 
     .title-4{
         font-size: 2rem;
+    }
+
+    .centered{
+        max-width: 90%;
     }
 }
