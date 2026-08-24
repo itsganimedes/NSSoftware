@@ -1,18 +1,19 @@
 /* ---------- HEADER & NAVBAR ---------- */
 
 .header-nav {
-    position: sticky;
+    position: fixed; /* Cambiado de sticky a fixed */
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
     background: rgba(5, 0, 15, 0.85);
     backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(43, 184, 250, 0.2);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    /* SACAMOS overflow: hidden para que el menú lateral pueda salir libremente */
 }
 
-/* El fondo difuminado ahora se controla sin romper el overflow del padre */
+
 .header-nav::before {
     content: "";
     position: absolute;
@@ -22,7 +23,7 @@
     opacity: 0.3;
     transform: scale(1.1);
     z-index: 0;
-    pointer-events: none; /* Evita que interfiera con los clicks */
+    pointer-events: none;
 }
 
 

@@ -27,7 +27,7 @@ html, body {
 #container{
     width: 100%;
     min-height: 100vh;
-    padding: 0 4rem;
+    padding: 4rem 4rem 0 4rem;
 }
 
 .title{
