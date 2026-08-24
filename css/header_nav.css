@@ -63,10 +63,6 @@
     margin: 0;
 }
 
-.brand h1 span {
-    color: var(--texts_icons);
-    text-shadow: 0 0 8px rgba(43, 184, 250, 0.5);
-}
 
 /* --- LINKS EN DESKTOP --- */
 .nav-links {
