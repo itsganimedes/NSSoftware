@@ -109,7 +109,7 @@ ul{
 @media (max-width: 1050px)
 {
     #container{
-        padding: 0;
+        padding: 4rem 0 0 0;
     }
 
     .info-2{
