@@ -1,75 +1,284 @@
-main img{
-    display: block;
-    margin: 2rem 0;
-    width: 80%;
+/* ================= ESTILOS GENERALES DE LA VISTA PREVIA ================= */
+.product-preview {
+    padding: 0 6rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #e0e0e6;
 }
 
-.product-preview{
-    padding: 0 8rem;
+/* Tipografía de Títulos con acento tecnológico */
+.product-preview .title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 2.5rem 0 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-left: 4px solid var(--texts_icons);
+    padding-left: 0.75rem;
 }
 
-.img2{
-    width: 25%;
+/* Párrafos e Información */
+.product-preview .img-desc {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #b8b5c0;
+    margin-bottom: 1.2rem;
 }
 
-.img3{
-    width: 35%;
+.product-preview .img-desc b {
+    color: #fff;
 }
 
-.boton{
-    background: #77adb1;
-    padding: 0.5rem 3rem;
-    color: rgb(10, 10, 10);
-    font-size: 1.3rem;
-    width: fit-content;
-    display: block;
-    margin: 3rem 0;
-    border-radius: 4px;
+/* Caja de Características rediseñada en cuadrícula estética */
+#container-caracteristicas {
+    background-color: var(--card);
+    border: 1px solid rgba(43, 184, 250, 0.15);
+    border-radius: 12px;
+    padding: 1.8rem 2.2rem;
+    margin: 1.5rem 0;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+}
+
+#container-caracteristicas .ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0.8rem 1.5rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#container-caracteristicas .ul li {
     position: relative;
-    text-decoration: none;
+    padding-left: 1.2rem;
+    font-size: 0.95rem;
+    color: #c5c2d1;
 }
 
-.boton:hover{
-    color: rgb(10, 10, 10);
+#container-caracteristicas .ul li::before {
+    content: "▸";
+    position: absolute;
+    left: 0;
+    color: var(--texts_icons);
 }
 
-.b_volver{
-    text-decoration: underline;
+/* Imágenes complementarias */
+main img {
     display: block;
-    color: #ccc;
+    margin: 2rem auto;
+    width: 75%;
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+.img2 {
+    width: 25% !important;
+}
 
+.img3 {
+    width: 35% !important;
+}
 
-@media (max-width: 1050px)
-{
-    main img{
-        width: 90%;
-        margin: 2rem auto;
+/* Botón de WhatsApp con Estilo Tecnológico y Animación */
+.boton {
+    background: linear-gradient(135deg, var(--texts_icons), #1a92ce);
+    color: var(--background-darker);
+    padding: 0.85rem 2.8rem;
+    font-size: 1.15rem;
+    font-weight: 700;
+    width: fit-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin: 2.5rem 0 1.5rem 0;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 18px rgba(43, 184, 250, 0.35);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.boton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(43, 184, 250, 0.6);
+    color: var(--background-darker);
+}
+
+/* Enlace de Volver elegante */
+.b_volver {
+    text-decoration: none;
+    display: inline-block;
+    color: #8c8898;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.b_volver:hover {
+    color: var(--texts_icons);
+    text-decoration: underline;
+}
+
+/* ================= ESTILOS DEL CARRUSEL TECNOLÓGICO ================= */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 750px;
+    margin: 2rem auto 0 auto;
+    background-color: var(--card);
+    border: 1px solid rgba(43, 184, 250, 0.25);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-track-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    width: 100%;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: transparent;
+}
+
+.carousel-slide img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: none;
+    border: none;
+    margin: 0;
+}
+
+/* Botones de Navegación del Carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(10, 1, 29, 0.85);
+    color: var(--texts_icons);
+    border: 1px solid var(--texts_icons);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background-color: var(--texts_icons);
+    color: var(--background-darker);
+    box-shadow: 0 0 12px var(--texts_icons);
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+/* Indicadores de puntos (Dots) */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 0.5rem 0 1rem 0;
+}
+
+.carousel-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-dot.active {
+    background-color: var(--texts_icons);
+    width: 22px;
+    border-radius: 4px;
+    box-shadow: 0 0 8px var(--texts_icons);
+}
+
+/* Contenedor de descripciones dinámicas */
+.carousel-caption-container {
+    margin-top: 1.2rem;
+    min-height: 70px;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.carousel-caption-container .img-desc {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    margin: 0 auto;
+}
+
+.carousel-caption-container .img-desc.active-caption {
+    display: block;
+    opacity: 1;
+}
+
+/* ================= DISEÑO RESPONSIVO ================= */
+@media (max-width: 1050px) {
+    .product-preview {
+        padding: 0 1.5rem;
     }
 
-    .product-preview{
-        padding: 0 1rem;
-
+    main img {
+        width: 95%;
+        margin: 1.5rem auto;
     }
 
-    .boton{
-        margin: 3rem auto;
+    .boton {
+        display: flex;
+        margin: 2.5rem auto;
+        text-align: center;
+        justify-content: center;
     }
 
-    .b_volver{
+    .b_volver {
+        display: block;
         text-align: center;
     }
 
-    .title{
-        padding: 0 2rem;
+    .product-preview .title {
+        font-size: 1.5rem;
+        padding-left: 0.5rem;
     }
 
-    .img2{
-        width: 50%;
+    .img2 {
+        width: 60% !important;
     }
 
-    .img3{
-        width: 90%;
+    .img3 {
+        width: 90% !important;
+    }
+    
+    #container-caracteristicas {
+        padding: 1.2rem;
     }
 }

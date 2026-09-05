@@ -36,47 +36,64 @@
             </header>
         </div>
         
-        <main>
+        <main class="product-preview">
             <p class="title">Gestor Gym</p>
 
-            <p class="info-2">Gestor Gym es un programa ideal para el monitoreo de tu gimnasio.</p>
-
+            <p class="info-2">Gestor Gym is un programa ideal para el monitoreo de tu gimnasio.</p>
             <p class="info-2">Con él, podrás mantener control total sobre los usuarios, sus pagos, sus asistencias y más.</p>
-
             <p class="info-2">Hicimos una adaptación para el gimnasio "PhoenixGYM":</p>
 
-            <img src="img/PhoenixGYM/Main.png" alt="Main">
+            <!-- ================= CARRUSEL DE INTERFACES ================= -->
+            <div class="carousel-container">
+                <div class="carousel-track-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        
+                        <div class="carousel-slide active" data-index="0">
+                            <img src="img/PhoenixGYM/Main.png" alt="Main">
+                        </div>
+                        <div class="carousel-slide" data-index="1">
+                            <img src="img/PhoenixGYM/Ingreso.png" alt="Nuevo Ingreso">
+                        </div>
+                        <div class="carousel-slide" data-index="2">
+                            <img src="img/PhoenixGYM/Administrador.png" alt="Administrador">
+                        </div>
+                        <div class="carousel-slide" data-index="3">
+                            <img src="img/PhoenixGYM/Estado.png" alt="Estado del Usuario">
+                        </div>
+                        <div class="carousel-slide" data-index="4">
+                            <img src="img/PhoenixGYM/Asistencias.png" alt="Marcar Asistencia">
+                        </div>
+                        <div class="carousel-slide" data-index="5">
+                            <img src="img/PhoenixGYM/Usuarios.png" alt="Panel de Usuarios">
+                        </div>
+                        <div class="carousel-slide" data-index="6">
+                            <img src="img/PhoenixGYM/Temporizador.png" alt="Temporizador">
+                        </div>
 
-            <p class="info-2">Contiene todo lo necesario, acoplado de forma sencilla de entender y de utilizar, junto con una interfaz visual amigable y completamente personalizable.</p>
+                    </div>
+                </div>
 
-            <img src="img/PhoenixGYM/Ingreso.png" alt="Nuevo Ingreso">
+                <!-- Controles de Flechas -->
+                <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next-btn" id="nextBtn" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
 
-            <p class="info-2">Podrás realizar ingresos de nuevos usuarios con muy pocos pasos y especificar detalles.</p>
+                <!-- Indicadores / Dots -->
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
 
-            <img src="img/PhoenixGYM/Administrador.png" alt="Nuevo Ingreso">
+            <!-- Descripción dinámica con clase img-desc -->
+            <div class="carousel-caption-container" id="captionContainer">
+                <p class="img-desc active-caption">Contiene todo lo necesario, acoplado de forma sencilla de entender y de utilizar, junto con una interfaz visual amigable y completamente personalizable.</p>
+                <p class="img-desc">Podrás realizar ingresos de nuevos usuarios con muy pocos pasos y especificar detalles.</p>
+                <p class="img-desc">Los planes serán desarollados a la medida de tu gimnasio: ¿8 clases? ¿12? Tu decisión.</p>
+                <p class="img-desc">Revisa el estado de tus usuarios con un solo click. ¿Su cuota está al día? ¿Cuántos puntos ha acumulado?</p>
+                <p class="img-desc">Función dinámica: deciles a tus usuarios que cada vez que lleguen al gimnasio registren su asistencia. ¡Solo les tomará escribir su DNI!</p>
+                <p class="img-desc">Ahora tendrás control total de tus clientes y miembros activos.</p>
+                <p class="img-desc">Incluye temporizador simple para tus clases y rutinas.</p>
+            </div>
 
-            <p class="info-2">Los planes serán desarollados a la medida de tu gimnasio: ¿8 clases? ¿12? Tu decisión.</p>
-
-            <img src="img/PhoenixGYM/Estado.png" class="img" alt="Estado del Usuario">
-
-            <p class="info-2">Revisa el estado de tus usuarios con un solo click.</p>
-            <p class="info-2">¿Su cuota está al día? ¿Cuántos puntos ha acumulado?</p>
-
-            <p class="info-2">¡No te preocupes! Puedes utilizar el programa aunque ya tengas usuarios. Solo es cuestión de agregarlos al sistema en unos minutos.</p>
-
-            <img src="img/PhoenixGYM/Asistencias.png" alt="Marcar Asistencia">
-
-            <p class="info-2">Función dinámica: deciles a tus usuarios que cada vez que lleguen al gimnasio registren su asistencia. ¡Solo les tomará escribir su DNI!</p>
-
+            <p class="info-2" style="margin-top: 2rem;">¡No te preocupes! Puedes utilizar el programa aunque ya tengas usuarios. Solo es cuestión de agregarlos al sistema en unos minutos.</p>
             <p class="info-2">Podés dejar de anotarlo en papel. De sus fechas de pago y la cantidad de clases que llevan... nos encargamos nosotros. <b>Despreocupate</b>.</p>
-
-            <img src="img/PhoenixGYM/Usuarios.png" alt="Panel de Usuarios">
-
-            <p class="info-2">Ahora tendrás control total.</p>
-
-            <img src="img/PhoenixGYM/Temporizador.png" alt="Nuevo Ingreso">
-
-            <p class="info-2">Incluye temporizador simple para tus clases.</p>
 
             <p class="title">Características Técnicas</p>
             <p class="info-2">Base de datos: SQLite (rápida y segura).</p>
@@ -132,6 +149,7 @@
     </footer>
 
     <script src="./js/setprices.js"></script>
-<script src="js/burger_menu.js"></script>
+    <script src="js/burger_menu.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>

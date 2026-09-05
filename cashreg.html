@@ -36,64 +36,72 @@
             </header>
         </div>
         
-        <main>
+        <main class="product-preview">
             <p class="title">Cashreg</p>
 
             <p class="info-2">Cashreg es un sistema sencillo para registrar las ventas de tu negocio.</p>
             <p class="info-2">Te permite <b>llevar un control</b>, tanto <b>diario como mensual</b>.</p>
 
-            <img src="img/Cashreg/Main.png" alt="main">
+            <!-- ================= CARRUSEL DE INTERFACES ================= -->
+            <div class="carousel-container">
+                <div class="carousel-track-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        
+                        <div class="carousel-slide active" data-index="0">
+                            <img src="img/Cashreg/Main.png" alt="main">
+                        </div>
+                        <div class="carousel-slide" data-index="1">
+                            <img src="img/Cashreg/RegistrarVenta.png" alt="registrar venta">
+                        </div>
+                        <div class="carousel-slide" data-index="2">
+                            <img src="img/Cashreg/VentasDia.png" alt="ventas del día">
+                        </div>
+                        <div class="carousel-slide" data-index="3">
+                            <img src="img/Cashreg/Excel.png" alt="Reporte de Ventas en Excel">
+                        </div>
+                        <div class="carousel-slide" data-index="4">
+                            <img src="img/Cashreg/ResumenMes.png" alt="resumen del mes">
+                        </div>
+                        <div class="carousel-slide" data-index="5">
+                            <img src="img/Cashreg/RegistrarCompra.png" alt="registrar compra">
+                        </div>
+                        <div class="carousel-slide" data-index="6">
+                            <img src="img/Cashreg/Compras.png" alt="panel de compras">
+                        </div>
+                        <div class="carousel-slide" data-index="7">
+                            <img src="img/Cashreg/Historial.png" alt="historial de ventas">
+                        </div>
+                        <div class="carousel-slide" data-index="8">
+                            <img src="img/Cashreg/Graficos.png" alt="gráficos">
+                        </div>
 
-            <p class="info-2">Cuenta con una interfaz simple y amigable. Pocos botones,<b> fácil de entender y manejar.</b></p>
-            <p class="info-2">Cashreg fue pensado para ser utilizado de forma dinámica y rápida. No hay funciones extra, nada de más, solo lo necesario.</p>
+                    </div>
+                </div>
 
-            <img src="img/Cashreg/RegistrarVenta.png" class="img2" alt="main">
+                <!-- Controles de Flechas -->
+                <button class="carousel-btn prev-btn" id="prevBtn" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="carousel-btn next-btn" id="nextBtn" aria-label="Siguiente"><i class="fa-solid fa-chevron-right"></i></button>
 
-            <p class="info-2">Te permite registrar cada una de tus ventas, especificando los datos necesarios. <b style="color: green;">Los motivos son ajustables</b></p>
+                <!-- Indicadores / Dots -->
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
 
-            <p class="info-2">Tus ventas se añadirán a la base de datos, que se guarda automáticamente de forma local.</p>
-
-            <img src="img/Cashreg/VentasDia.png" alt="main">
-
-            <p class="info-2">Llevarás un monitoreo diario, que te detallará cada una de las ventas que hiciste y el total de ingresos en el día.</p>
-            <p class="info-2">Presenta también la función de exportar tu reporte de ventas a <b style="color: green;">Excel</b>.</p>
-            <p class="info-2">La instrucción es simple: cada vez que el día termine, <b style="color: rgb(219, 117, 117);">presionas terminar</b>.</p>
-
-            <img src="img/Cashreg/Excel.png" alt="Reporte de Ventas en Excel">
-
-            <p class="info-2">Tus ingresos diarios se sumarán a los ingresos mensuales, que podrás controlar también:</p>
-
-            <img src="img/Cashreg/ResumenMes.png" alt="main">
-
-            <p class="info-2">En pantalla se mostrarán tus ingresos mensuales y tu ganancia neta, calculada automáticamente restando tu inversión en insumos para el negocio que lleves.</p>
-            <p class="info-2">Sí, <b>también puedes registrar compras:</b></p>
-
-            <img src="img/Cashreg/RegistrarCompra.png" class="img2" alt="main">
-
-            <p class="info-2">Registra cada una de tus compras.</p>
-
-            <img src="img/Cashreg/Compras.png" alt="panel_compras">
-
-            <p class="info-2">Y entonces visualizalas con detalle.</p>
-
-            <img src="img/Cashreg/Historial.png" alt="historial_de_ventas">
-
-            <p class="info-2">¿Te gustaría poder ver qué día rendiste mejor? ¿O qué mes?</p>
-            <p class="info-2">Cashreg te lo permite.</p>
-            <p class="info-2">Pero se pone aún mejor.</p>
-
-            <img src="img/Cashreg/Graficos.png" alt="graficos">
-
-            <p class="info-2">¡Puedes ver detalles graficados!</p>
-
-            <p class="info-2">Filtra por <b>ventas o ingresos</b>.</p>
-
-            <p class="info-2">Y haz, con estas funciones, un seguimiento cercano y preciso a tu negocio.</p>
+            <!-- Descripciones dinámicas con clase img-desc -->
+            <div class="carousel-caption-container" id="captionContainer">
+                <p class="img-desc active-caption">Cuenta con una interfaz simple y amigable. Pocos botones, <b>fácil de entender y manejar.</b> Cashreg fue pensado para ser utilizado de forma dinámica y rápida. No hay funciones extra, nada de más, solo lo necesario.</p>
+                <p class="img-desc">Te permite registrar cada una de tus ventas, especificando los datos necesarios. <b style="color: green;">Los motivos son ajustables</b>. Tus ventas se añadirán a la base de datos, que se guarda automáticamente de forma local.</p>
+                <p class="img-desc">Llevarás un monitoreo diario, que te detallará cada una de las ventas que hiciste y el total de ingresos en el día. Presenta también la función de exportar tu reporte de ventas a <b style="color: green;">Excel</b>. La instrucción es simple: cada vez que el día termine, <b style="color: rgb(219, 117, 117);">presionas terminar</b>.</p>
+                <p class="img-desc">Reporte detallado de tus transacciones y ventas exportadas directamente a planilla de cálculo.</p>
+                <p class="img-desc">Tus ingresos diarios se sumarán a los ingresos mensuales, que podrás controlar también. En pantalla se mostrarán tus ingresos mensuales y tu ganancia neta, calculada automáticamente restando tu inversión en insumos para el negocio que lleves.</p>
+                <p class="img-desc">Sí, <b>también puedes registrar compras:</b> registra cada una de tus adquisiciones e insumos para mantener todo al día.</p>
+                <p class="img-desc">Visualiza todas tus compras con total detalle y orden en un solo panel de control.</p>
+                <p class="img-desc">¿Te gustaría poder ver qué día rendiste mejor? ¿O qué mes? Cashreg te lo permite con su historial avanzado. Pero se pone aún mejor.</p>
+                <p class="img-desc">¡Puedes ver detalles graficados! Filtra por <b>ventas o ingresos</b> y haz, con estas funciones, un seguimiento cercano y preciso a tu negocio.</p>
+            </div>
 
             <br>
-
-
             <p class="info-2">Esto es <b>Cashreg</b> base. Recuerda que <b style="color: rgb(214, 214, 158);">las funciones pueden ser adaptadas a tus necesidades.</b></p>
+            
             <p class="title">Características Técnicas</p>
             <p class="info-2">Base de datos: SQLite (rápida y segura).</p>
             <p class="info-2">Tipo: local (se guarda en tu PC).</p>
@@ -148,6 +156,7 @@
     </footer>
 
     <script src="./js/setprices.js"></script>
-<script src="js/burger_menu.js"></script>
+    <script src="js/burger_menu.js"></script>
+    <script src="js/carousel.js"></script>
 </body>
 </html>
