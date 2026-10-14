@@ -12,13 +12,16 @@
     <link rel="icon" type="image/png" href="img/NSSlogo2-removebg-preview.png">
 </head>
 <body>
+    <!-- Luz que sigue al cursor -->
+    <div class="cursor-glow" id="cursor-glow"></div>
+
     <div id="container">
 
         <div class="header-nav">
             <header class="navbar">
                 <div class="brand">
                     <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
-                    <h1><span>NSSoftware</span></h1>
+                    <h1>NSSoftware</h1>
                 </div>
 
                 <button class="burger-menu" id="burger-btn" aria-label="Abrir menú">
@@ -45,7 +48,24 @@
 
                 <div class="productos">
 
-                    <!-- CASHREG -->
+                    <!-- POSKo -->
+                    <article class="producto">
+                        <p class="producto-title"><i class="fa-solid fa-desktop"></i> POSKo</p>
+                        <div class="producto_img" style="background-image: url('img/POSKo/Inicio.png');"></div>
+                        <p class="producto-desc">POSKo es un sistema de punto de venta simple y eficiente, diseñado especialmente para pequeños y medianos negocios que buscan una herramienta práctica y estable. POSKo es compatible con lectores de código barra. Ofrece funciones avanzadas de gestión, tales como conexión remota a un servidor en línea, roles empleado-admin personalizables e integración con impresoras térmicas para generar tickets como comprobantes de venta.</p>
+                        <p style="color: green;" id="p_poskoe">USD 26</p>
+                        <a href="posko.html"><i class="fa-solid fa-eye"></i> Ver</a>
+                    </article>
+
+                    <article class="producto">
+                        <p class="producto-title"><i class="fa-solid fa-desktop"></i> Perapp</p>
+                        <div class="producto_img" style="background-image: url('img/PerApp/Historial.png');"></div>
+                        <p class="producto-desc">Perapp es un punto de venta especializado en el sector de verdulerías y productos pesables, con la capacidad de integrar hasta 3 balanzas funcionando en simultáneo en una sola PC. Gestiona ventas, sistema de caja y movimientos diarios, historiales, clientes, tickets, control de stock y más.</p>
+                        <p style="color: green;" id="p_perapp">USD 46</p>
+                        <a href="perapp.html"><i class="fa-solid fa-eye"></i> Ver</a>
+                    </article>
+
+                                        <!-- CASHREG -->
                     <article class="producto">
                         <p class="producto-title"><i class="fa-solid fa-desktop"></i> Cashreg</p>
                         <div class="producto_img" style="background-image: url('img/Cashreg/Main.png');"></div>
@@ -66,23 +86,6 @@
                         <a href="gym.html"><i class="fa-solid fa-eye"></i> Ver</a>
                     </article>
 
-                    <!-- POSKo -->
-                    <article class="producto">
-                        <p class="producto-title"><i class="fa-solid fa-desktop"></i> POSKo</p>
-                        <div class="producto_img" style="background-image: url('img/POSKo/Inicio.png');"></div>
-                        <p class="producto-desc">POSKo es un sistema de punto de venta simple y eficiente, diseñado especialmente para pequeños y medianos negocios que buscan una herramienta práctica y estable. POSKo es compatible con lectores de código barra. Ofrece funciones avanzadas de gestión, tales como conexión remota a un servidor en línea, roles empleado-admin personalizables e integración con impresoras térmicas para generar tickets como comprobantes de venta.</p>
-                        <p style="color: green;" id="p_poskoe">USD 26</p>
-                        <a href="posko.html"><i class="fa-solid fa-eye"></i> Ver</a>
-                    </article>
-
-                    <!-- POSKo Pro -->
-                    <!-- <article class="producto">
-                        <p class="producto-title"><i class="fa-solid fa-desktop"></i> POSKo Pro</p>
-                        <div class="producto_img" style="background-image: url('img/POSKo/Inicio.png');"></div>
-                        <p class="producto-desc">POSKo Pro ofrece funciones avanzadas de gestión, tales como conexión remota a un servidor en línea, roles empleado-admin personalizables e integración con impresoras térmicas para generar tickets como comprobantes de venta.</p>
-                        <p style="color: green;" id="p_poskopro">$72,000</p>
-                        <a href="poskopro.html"><i class="fa-solid fa-eye"></i> Ver</a>
-                    </article> -->
 
                 </div>
 
@@ -132,6 +135,16 @@
     </footer>
 
     <script src="./js/setprices.js"></script>
-<script src="js/burger_menu.js"></script>
+    <script src="js/burger_menu.js"></script>
+
+    <script>
+        const glow = document.getElementById('cursor-glow');
+
+        window.addEventListener('mousemove', (e) => {
+            // Mueve el resplandor a la posición actual del cursor (x, y)
+            glow.style.left = `${e.clientX}px`;
+            glow.style.top = `${e.clientY}px`;
+        });
+    </script>
 </body>
 </html>

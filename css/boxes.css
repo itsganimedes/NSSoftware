@@ -34,7 +34,16 @@
     filter: drop-shadow(0 0 6px rgba(43, 184, 250, 0.6));
 }
 
-.title_centered span {
+span {
+    background: linear-gradient(135deg, var(--texts_icons) 0%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 25px rgba(43, 184, 250, 0.4));
+    position: relative;
+    display: inline-block;
+}
+
+span {
     background: linear-gradient(135deg, var(--texts_icons) 0%, #a855f7 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -59,6 +68,42 @@
     margin: 0.5rem 0;
 }
 
+
+
+
+
+/* luz que sigue al cursor */
+
+
+
+.cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 450px;
+    height: 450px;
+    background: radial-gradient(
+        circle,
+        rgba(43, 184, 250, 0.18) 0%,  
+        rgba(168, 85, 247, 0.08) 45%, 
+        transparent 70%   
+    );
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0; 
+    transform: translate(-50%, -50%); 
+    transition: transform 0.1s ease-out; 
+}
+
+@media (max-width: 768px) {
+    .cursor-glow {
+        display: none;
+    }
+}
+
+
+
+/**/
 
 
 .buttons{
@@ -230,111 +275,130 @@
     transform: rotate(12deg) scale(1.1); /* Gira y se agranda un pelín */
 }
 /* EQUIPO (team) */
-
-.team{
+/* ---------- CONTENEDOR DEL EQUIPO ---------- */
+.team {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
     flex-wrap: wrap;
-    max-width: 100%;
-    margin: 2rem auto;
+    width: 100%;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1rem;
 }
 
-.member{
-    width: 20%;
-    height: 20rem;
+/* ---------- CADA TARJETA DE MIEMBRO ---------- */
+.member {
+    flex: 1 1 240px;
+    max-width: 280px;
+    height: 22rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgb(0, 0, 0,0.8);
-    padding: 2rem 1rem;
+    background: var(--card, #0a011d);
+    border: 1px solid rgba(43, 184, 250, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 2rem 1.5rem;
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .member::before {
     content: "";
     position: absolute;
     width: 120%;
-    height: 60%;
-    top: -25%;
-    left: -20%;
-    background: #8affc7;
-    transform: rotate(-18deg);
-    border-radius: 20px;
+    height: 50%;
+    top: -20%;
+    left: -10%;
+    background: linear-gradient(135deg, rgba(43, 184, 250, 0.12), rgba(168, 85, 247, 0.12));
+    transform: rotate(-12deg);
+    border-radius: 16px;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
 }
 
-.member-img{
-    width: 8rem;
-    height: 8rem;
+/* ---------- FOTO DEL MIEMBRO ---------- */
+.member-img {
+    width: 7.5rem;
+    height: 7.5rem;
     border-radius: 50%;
-    border: 3px solid #8affc7;
-    background: url("../img/ManUser.png");
-    background-position: center;
-    background-size: cover;
+    border: 3px solid var(--texts_icons, #2bb8fa);
+    background: url("../img/ManUser.png") center/cover no-repeat;
     z-index: 1;
+    box-shadow: 0 0 15px rgba(43, 184, 250, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.member b{
-    font-size: 1.2rem;
+/* ---------- NOMBRE ---------- */
+.member b {
+    font-size: 1.25rem;
+    color: #ffffff;
+    font-weight: 700;
+    z-index: 1;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
 }
 
-.member:hover{
-    transform: scale(1.05);
+.member:hover b {
+    color: var(--texts_icons, #2bb8fa);
 }
 
-.member:hover i{
+/* ---------- EFECTOS HOVER ---------- */
+.member:hover {
+    transform: translateY(-8px);
+    border-color: rgba(43, 184, 250, 0.6);
+    box-shadow: 0 15px 35px rgba(43, 184, 250, 0.2), 
+                0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.member:hover i {
     transform: rotate(10deg);
 }
 
-.member:hover .member-img{
-    transform: scale(0.9);
+.member:hover .member-img {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(43, 184, 250, 0.5);
 }
 
-/* .member:hover i::after{
-    background: #3febc0;
-    filter: blur(30px);
-} */
 
-.member p{
-    color: rgb(20, 20, 20);
+@media (max-width: 768px) {
+    .team {
+        gap: 1.5rem;
+        padding: 0 1rem;
+        margin: 2rem auto;
+    }
+
+    .member {
+        width: 100%;
+        max-width: 100%; 
+        height: 20rem;
+    }
 }
 
-.member i{
-    font-size: 1.2rem;
-    padding: 1rem;
-    text-align: center;
-    margin: 1rem 0;
-    position: absolute;
-    top: 40%;
-    right: 0;
+.download_button {
+    padding: 1rem 2.5rem;
+    background: green;
+    color: #0f0f0f;
+    border-radius: 18px;
+    display: block;
+    width: fit-content;
+    margin: 3rem auto;
+    text-decoration: none;
+    font-weight: 500;
 }
 
-/* .member i::after
-{
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #141414;
-    border-radius: 50%;
-    width: 5rem;
-    height: 5rem;
-    z-index: -1;
-} */
-
-.member_desc{
-    color: rgb(105, 105, 105) !important;
-    font-size: 0.9rem;
+.download_button:hover{
+    color: #000;
+    background: rgb(11, 155, 131);
 }
 
 /* LINEA DEL TIEMPO */
@@ -1590,10 +1654,6 @@
 
     .pag_web_box{
         width: 100%;
-    }
-
-    .team{
-        flex-direction: column;
     }
 
     .member{
