@@ -14,111 +14,82 @@
 <body class="home">
     <div id="container">
 
-        <div class="header-nav">
-            <header class="navbar">
-                <div class="brand">
-                    <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
-                    <h1><span>NSSoftware</span></h1>
-                </div>
+        <div class="hero-section">
+    <!-- Fondo con la imagen y capa oscura -->
+    <div class="hero-background"></div>
 
-                <button class="burger-menu" id="burger-btn" aria-label="Abrir menú">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
+    <!-- Header fijo arriba -->
+    <div class="header-nav">
+        <header class="navbar">
+            <div class="brand">
+                <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
+                <h1><span>NSSoftware</span></h1>
+            </div>
 
-                <nav class="nav-links" id="nav-links">
-                    <a href="index.html" class="active">Inicio</a>
-                    <a href="productos.html">Productos</a>
-                    <a href="info.html">Cómo Funciona</a>
-                    <a href="contacto.html">Contacto</a>
-                </nav>
-            </header>
+            <button class="burger-menu" id="burger-btn" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="active">Inicio</a>
+                <a href="productos.html">Productos</a>
+                <a href="info.html">Cómo Funciona</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+        </header>
+    </div>
+        
+    <!-- Contenido principal que queda ENCIMA de la foto -->
+    <div class="index_info">
+        <!-- Eliminamos el div.img-working antiguo si ya no lo usas -->
+        <p id="software_solutions"><i class="fa-solid fa-code"></i> Soluciones de Software</p>
+        <b>Desarrollo de <span>Software</span> y Soporte Tecnológico</b>
+        
+        <div class="redes">
+            <a href="https://www.instagram.com/nssoftware_/" target="_blank"><i class="fa-brands fa-instagram" style="color: #ac25c7;"></i></a>
+            <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=jrjtXFCLBCjrSbngZpMJJWPnPsdNgWhwcJkFWqCrsxHrJhGXZxSQHwFZGBVxCnHLjxsrNTMN" target="_blank"><i class="fa-regular fa-envelope" style="color: #c72525;"></i></a>
+            <a href="https://wa.me/2645128508?text=¡Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20servicios." target="_blank"><i class="fa-brands fa-whatsapp" style="color: #4af133;"></i></a>
         </div>
         
-        <div class="index_info">
+        <p class="info-2 " style="color: gray;">Brindamos soporte técnico en el área de tecnología y servicios de programación, informática y sistemas.</p>
 
-            <div class="img-working"></div>
-
-            <p id="software_solutions"><i class="fa-solid fa-code"></i> Soluciones de Software</p>
-
-            <p class="title-2">Desarrollo y soporte tecnológico para crecer</p>
-            <div class="redes">
-                <a href="https://www.instagram.com/nssoftware_/" target="_blank"><i class="fa-brands fa-instagram" style="color: #ac25c7;"></i></a>
-                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=jrjtXFCLBCjrSbngZpMJJWPnPsdNgWhwcJkFWqCrsxHrJhGXZxSQHwFZGBVxCnHLjxsrNTMN" target="_blank"><i class="fa-regular fa-envelope" style="color: #c72525;"></i></a>
-                <a href="https://wa.me/2645128508?text=¡Hola!%20Me%20interesa%20conocer%20más%20sobre%20sus%20servicios." target="_blank"><i class="fa-brands fa-whatsapp" style="color: #4af133;"></i></a>
-            </div>
-            <p class="info-2 centered" style="color: gray;">Brindamos ayuda tecnológica a aquellos que más la necesiten. Desde reparación de computadoras hasta desarrollo de software y diseño gráfico.</p>
-
-            <div class="buttons">
-                <a href="productos.html" class="b1">Ver productos</a>
-                <a href="info.html" class="b2">Más información</a>
-            </div>
-
-            <p class="title-3">¿Qué ofrecemos?</p>
-
-            <div class="mnts">
-                <div class="mnt">
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                    <p class="mnt_desc">Mantenimiento y reparaciones</p>
-                </div>
-                <div class="mnt">
-                    <i class="fa-solid fa-phone"></i>
-                    <p class="mnt_desc">Soporte y atención constante</p>
-                </div>  
-                <div class="mnt">
-                    <i class="fa-solid fa-server"></i>
-                    <p class="mnt_desc">Instalación de servidores</p>
-                </div>
-                <div class="mnt">
-                    <i class="fa-solid fa-microchip"></i>
-                    <p class="mnt_desc">Integración con hardware</p>
-                </div>
-                <div class="mnt">
-                    <i class="fa-solid fa-circle-check"></i>
-                    <p class="mnt_desc">Configuración y puesta en marcha</p>
-                </div>
-            </div>
-
-            
-            <div class="tech-banner">
-                <div class="scanline"></div>
-                <div class="glow-line top"></div>
-                
-                <div class="banner-content">
-                    <span class="tech-prefix">&gt;_ CONSTRUYENDO EL FUTURO:</span>
-                    <span id="typing-text" class="typing-text"></span><span class="cursor">|</span>
-                </div>
-
-                <div class="glow-line bottom"></div>
-            </div>
-
-            <div style="margin: 0 0 4rem 0;">
-                <p class="title-3">Nuestras soluciones de software</p>
-                <p class="info-2 centered" style="color: gray;">¿Qué nos gusta trabajar?</p>
-            </div>
+        <div class="buttons">
+            <a href="productos.html" class="b1">Ver productos</a>
+            <a href="info.html" class="b2">Más información</a>
+        </div>
         
-            <div class="caracteristicas">
-                <div class="caracteristica">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <p class="car_title">Sistemas de ventas</p>
-                    <p class="car_desc">Soluciones de punto de venta modernas e intuitivas diseñadas para negocios minoristas y proyectos con seguimiento de inventario en tiempo real.</p>
-                </div>
-                <div class="caracteristica">
-                    <i class="fa-solid fa-money-bill-trend-up"></i>
-                    <p class="car_title">Gestión financiera</p>
-                    <p class="car_desc">Herramientas integrales de seguimiento e informes financieros para controlar el flujo de caja de tu negocio en tiempo real. La economía debe ser atendida. </p>
-                </div>
-                <div class="caracteristica">
-                    <i class="fa-solid fa-people-group"></i>
-                    <p class="car_title">Infraestructura sólida</p>
-                    <p class="car_desc">Bases de datos que soportan altas cantidades de información, haciendo posible y viable el manejo de usuarios, productos y mucho más.</p>
-                </div>
-            </div>
+        <!-- Resto de tus elementos... -->
+    </div>
+</div>
 
+        <div class="title_centered">
+            <p class="mini_title">NUESTRO TRABAJO</p>
+            <b>Enfoques <span>Principales</span></b>
         </div>
 
-        <div class="tech">
+        <div class="index_boxes">
+            <div class="index_box">
+                <i class="fa-solid fa-laptop-code"></i>
+                <b>Puntos de Venta</b>
+                <p>Programas de stock y ventas desarrollados tras meses de cercanía con diferentes rubros que nos dieron un gran conocimiento acerca de las problemáticas a resolver.</p>
+            </div>
+
+            <div class="index_box">
+                <i class="fa-solid fa-globe"></i>
+                <b>Sistemas Web</b>
+                <p>Programación en entornos web que dan como resultado productos de acceso remoto, estética moderna e intuitiva, lógica compleja y sistemas multi-usuarios.</p>
+            </div>
+
+            <div class="index_box">
+                <i class="fa-solid fa-plug"></i>
+                <b>Integración con Hardware</b>
+                <p>Software diseñado específicamente para conectarse a equipos concretos y utilizar datos de ellos.</p>
+            </div>
+        </div>
+
+        <!-- <div class="tech">
 
             <p class="title">Tecnologías</p>
 
@@ -142,7 +113,7 @@
                         <img src="img/MySQL.png" style="max-width: 9rem; border-radius: 50%;" alt=".net">
                     </div>
             </div>
-        </div>
+        </div> -->
 
         <div class="img-info" style="background: var(--background-darker);">
 
