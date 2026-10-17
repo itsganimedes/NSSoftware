@@ -1,0 +1,200 @@
+/* ===== Imprimibles: layout ===== */
+.gen-stack{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.gen-nota{
+    margin: 4px 0 14px;
+    font-size: 0.8rem;
+    opacity: 0.65;
+    line-height: 1.4;
+}
+
+.calc-card textarea{
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 120px;
+    resize: vertical;
+    background: var(--background-color);
+    color: var(--texts_icons);
+    border: 1px solid rgba(43, 184, 250, 0.35);
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+}
+
+.calc-card textarea:focus{
+    border-color: var(--texts_icons);
+    box-shadow: 0 0 0 3px rgba(43, 184, 250, 0.2);
+}
+
+.calc-card textarea::placeholder{
+    color: var(--texts_icons);
+    opacity: 0.35;
+}
+
+/* Chips de ejemplos */
+.gen-chips{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.gen-chip{
+    background: transparent;
+    color: var(--texts_icons);
+    border: 1px solid rgba(43, 184, 250, 0.4);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.gen-chip:hover{
+    background: rgba(43, 184, 250, 0.15);
+}
+
+.gen-check{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.calc-card .gen-check input,
+.calc-card .c-oferta input{
+    width: auto;
+    accent-color: var(--texts_icons);
+}
+
+/* Botones */
+.gen-btns{
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.gen-btns .calc-btn{
+    margin-top: 0;
+    flex: 1;
+}
+
+.calc-btn-sec{
+    background: transparent;
+    color: var(--texts_icons);
+    border: 1px solid var(--texts_icons);
+}
+
+/* ===== Filas de cartelitos ===== */
+.cart-head,
+.cart-fila{
+    display: grid;
+    grid-template-columns: 1.5fr 0.9fr 1fr 80px 32px;
+    gap: 8px;
+    align-items: center;
+}
+
+.cart-head{
+    font-size: 0.75rem;
+    font-weight: 600;
+    opacity: 0.7;
+    margin-bottom: 6px;
+}
+
+.cart-fila{
+    margin-bottom: 8px;
+}
+
+.cart-fila input[type="text"]{
+    padding: 8px 10px;
+    font-size: 0.9rem;
+}
+
+.c-oferta{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+/* ===== QR ===== */
+.qr-layout{
+    display: grid;
+    grid-template-columns: 1fr 240px;
+    gap: 24px;
+    align-items: start;
+}
+
+.qr-preview{
+    text-align: center;
+}
+
+.qr-preview img{
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.qr-vacio{
+    width: 100%;
+    max-width: 220px;
+    aspect-ratio: 1;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed rgba(43, 184, 250, 0.4);
+    border-radius: 10px;
+    font-size: 0.85rem;
+    opacity: 0.6;
+}
+
+.qr-preview [hidden]{
+    display: none;
+}
+
+.qr-preview small{
+    display: block;
+    margin-top: 8px;
+    font-size: 0.75rem;
+    opacity: 0.6;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 700px){
+    .qr-layout{
+        grid-template-columns: 1fr;
+    }
+    .qr-preview{
+        order: -1;
+    }
+    .cart-head{
+        display: none;
+    }
+    .cart-fila{
+        grid-template-columns: 1fr 1fr 32px;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed rgba(43, 184, 250, 0.25);
+    }
+    .cart-fila .c-nombre{
+        grid-column: 1 / -1;
+    }
+    .cart-fila .c-detalle{
+        grid-column: 1 / 3;
+    }
+    .gen-btns{
+        flex-direction: column;
+    }
+}

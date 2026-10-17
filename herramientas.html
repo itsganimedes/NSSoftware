@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información - NSS</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/header_nav.css">
+    <link rel="stylesheet" href="css/boxes.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/herramientas.css">
+    <link rel="stylesheet" href="css/aside.css">
+    <link rel="stylesheet" href="css/plantillas.css">
+
+    <link rel="stylesheet" href="css/generadores.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/png" href="img/NSSlogo2-removebg-preview.png">
+</head>
+<body>
+    <div id="container">
+        <div class="header-nav">
+            <header class="navbar">
+                <div class="brand">
+                    <img src="img/NSSlogo2-removebg-preview.png" id="logo" alt="Logo">
+                    <h1>NSSoftware</h1>
+                </div>
+
+                <button class="burger-menu" id="burger-btn" aria-label="Abrir menú">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <nav class="nav-links" id="nav-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="productos.html">Productos</a>
+                    <a href="herramientas.html" class="active">Herramientas</a>
+                    <a href="info.html">Cómo Funciona</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </header>
+        </div>
+
+        <div class="layout-herramientas">
+
+            <!-- ASIDE -->
+            <aside class="aside-herramientas" aria-label="Secciones de herramientas">
+                <p class="aside-titulo">Secciones</p>
+                <ul class="aside-lista">
+                    <li>
+                        <a href="#calculadoras" class="aside-link activo" data-target="calculadoras">
+                            <i class="fa-solid fa-calculator"></i> Calculadoras
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#imprimibles" class="aside-link" data-target="imprimibles">
+                            <i class="fa-solid fa-print"></i> Imprimibles
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#plantillas" class="aside-link" data-target="plantillas">
+                            <i class="fa-solid fa-table"></i> Plantillas
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#documentos" class="aside-link" data-target="documentos">
+                            <i class="fa-solid fa-file-lines"></i> Documentos
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- CONTENIDO -->
+            <section class="contenido">
+                <p class="title-4">Herramientas para Vos</p>
+
+                <!-- Panel: Calculadoras -->
+                <div class="panel activo" id="calculadoras">
+                    <div class="calc-grid">
+
+                        <!-- Calculadora de precio de venta -->
+                        <article class="calc-card" id="calc-precio">
+                            <h3 class="calc-titulo">Calculadora de precio de venta</h3>
+                            <p class="calc-desc">Poné lo que te costó el producto y el margen que querés ganar. Te decimos a cuánto venderlo.</p>
+
+                            <div class="calc-campo">
+                                <label for="precio-costo">Costo del producto ($)</label>
+                                <input type="text" id="precio-costo" inputmode="decimal" placeholder="Ej: 1500">
+                            </div>
+
+                            <div class="calc-fila">
+                                <div class="calc-campo">
+                                    <label for="precio-margen">Margen (%)</label>
+                                    <input type="text" id="precio-margen" inputmode="decimal" placeholder="Ej: 30">
+                                </div>
+                                <div class="calc-campo">
+                                    <label for="precio-iva">IVA</label>
+                                    <select id="precio-iva">
+                                        <option value="0">Sin IVA</option>
+                                        <option value="10.5">10,5%</option>
+                                        <option value="21">21%</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="calc-campo">
+                                <label for="precio-tipo">El margen se calcula sobre</label>
+                                <select id="precio-tipo">
+                                    <option value="costo">El costo (recargo)</option>
+                                    <option value="venta">El precio de venta (margen real)</option>
+                                </select>
+                            </div>
+
+                            <div class="calc-resultado" id="precio-resultado" aria-live="polite">
+                                <p class="calc-vacio">Completá el costo y el margen para ver el resultado.</p>
+                            </div>
+                        </article>
+
+                        <!-- Calculadora de aumento de precios -->
+                        <article class="calc-card" id="calc-aumento">
+                            <h3 class="calc-titulo">Calculadora de aumento de precios</h3>
+                            <p class="calc-desc">Te subió el proveedor, ¿cuánto subís cada producto? Cargá tus precios y el porcentaje.</p>
+
+                            <div class="calc-fila">
+                                <div class="calc-campo">
+                                    <label for="aumento-porcentaje">Aumento (%)</label>
+                                    <input type="text" id="aumento-porcentaje" inputmode="decimal" placeholder="Ej: 12">
+                                </div>
+                                <div class="calc-campo">
+                                    <label for="aumento-redondeo">Redondear a</label>
+                                    <select id="aumento-redondeo">
+                                        <option value="0">No redondear</option>
+                                        <option value="1">$1</option>
+                                        <option value="10">$10</option>
+                                        <option value="50">$50</option>
+                                        <option value="100">$100</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="calc-productos-head">
+                                <span>Producto</span>
+                                <span>Precio actual</span>
+                                <span>Precio nuevo</span>
+                                <span></span>
+                            </div>
+                            <div id="aumento-lista"></div>
+
+                            <button type="button" class="calc-btn" id="aumento-agregar">+ Agregar producto</button>
+                        </article>
+
+                    </div>
+                </div>
+
+                <div class="panel" id="imprimibles">
+                    <b>Cartel de Aviso</b>
+                    <b>Carteletes de Precios</b>
+                    <b>QR de Pago</b>
+
+                    <div class="gen-stack">
+                
+                        <!-- Cartel de texto -->
+                        <article class="calc-card" id="gen-cartel">
+                            <h3 class="calc-titulo">Cartel de Aviso</h3>
+                            <p class="calc-desc">Escribí el texto y bajá un PDF en A4, limpio y listo para imprimir.</p>
+                
+                            <div class="gen-chips">
+                                <button type="button" class="gen-chip" data-preset="horario">Horario de atención</button>
+                                <button type="button" class="gen-chip" data-preset="transferencia">Aceptamos transferencias</button>
+                                <button type="button" class="gen-chip" data-preset="oferta">Oferta del día</button>
+                            </div>
+                
+                            <div class="calc-campo">
+                                <label for="cartel-titulo">Título</label>
+                                <input type="text" id="cartel-titulo" maxlength="80" placeholder="Ej: Horario de atención">
+                            </div>
+                
+                            <div class="calc-campo">
+                                <label for="cartel-texto">Texto (cada renglón nuevo es una línea)</label>
+                                <textarea id="cartel-texto" maxlength="600" placeholder="Ej: 9 a 13 y 17 a 21"></textarea>
+                            </div>
+                
+                            <div class="calc-campo">
+                                <label for="cartel-tamano">Tamaño de letra</label>
+                                <select id="cartel-tamano">
+                                    <option value="36">Normal</option>
+                                    <option value="54" selected>Grande</option>
+                                    <option value="72">Muy grande</option>
+                                </select>
+                            </div>
+                
+                            <label class="gen-check"><input type="checkbox" id="cartel-marco" checked> Agregar marco</label>
+                
+                            <div class="gen-btns">
+                                <button type="button" class="calc-btn" id="cartel-descargar">Descargar PDF</button>
+                                <button type="button" class="calc-btn calc-btn-sec" id="cartel-imprimir">Imprimir</button>
+                            </div>
+                        </article>
+                
+                        <!-- Cartelitos de precios -->
+                        <article class="calc-card" id="gen-cartelitos">
+                            <h3 class="calc-titulo">Cartelitos de precios</h3>
+                            <p class="calc-desc">Cargá tus productos y bajá los cartelitos listos para recortar.</p>
+                
+                            <div class="calc-campo">
+                                <label for="cartelitos-tamano">Cartelitos por hoja</label>
+                                <select id="cartelitos-tamano">
+                                    <option value="2">2 (grandes)</option>
+                                    <option value="4">4 (medianos)</option>
+                                    <option value="8" selected>8 (chicos)</option>
+                                </select>
+                            </div>
+                
+                            <div class="cart-head">
+                                <span>Producto</span>
+                                <span>Precio</span>
+                                <span>Detalle</span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div id="cartelitos-lista"></div>
+                
+                            <button type="button" class="calc-btn calc-btn-sec" id="cartelitos-agregar">+ Agregar producto</button>
+                
+                            <div class="gen-btns">
+                                <button type="button" class="calc-btn" id="cartelitos-descargar">Descargar PDF</button>
+                                <button type="button" class="calc-btn calc-btn-sec" id="cartelitos-imprimir">Imprimir</button>
+                            </div>
+                        </article>
+                
+                        <!-- Cartel de cobro con QR -->
+                        <article class="calc-card" id="gen-qr">
+                            <h3 class="calc-titulo">Cartel de cobro con QR</h3>
+                            <p class="calc-desc">Subí el QR oficial de tu Mercado Pago o banco y armamos un cartel prolijo para imprimir.</p>
+                
+                            <div class="qr-layout">
+                                <div>
+                                    <div class="calc-campo">
+                                        <label for="qr-archivo">Imagen de tu QR (PNG o JPG)</label>
+                                        <input type="file" id="qr-archivo" accept="image/png,image/jpeg">
+                                    </div>
+                                    <p class="gen-nota">Descargalo o sacale una captura desde la opción de cobrar con QR de tu app de Mercado Pago o de tu banco.</p>
+                                    <div class="calc-campo">
+                                        <label for="qr-titulo">Título del cartel</label>
+                                        <input type="text" id="qr-titulo" maxlength="40" value="Pagá con QR">
+                                    </div>
+                                    <div class="calc-campo">
+                                        <label for="qr-alias">Alias (opcional)</label>
+                                        <input type="text" id="qr-alias" maxlength="30" placeholder="Ej: kiosco.don.pepe">
+                                    </div>
+                                    <div class="calc-campo">
+                                        <label for="qr-nombre">Nombre del negocio (opcional)</label>
+                                        <input type="text" id="qr-nombre" maxlength="60" placeholder="Ej: Kiosco Don Pepe">
+                                    </div>
+                                    <div class="calc-campo">
+                                        <label for="qr-tamano">Tamaño</label>
+                                        <select id="qr-tamano">
+                                            <option value="1">Hoja completa (A4)</option>
+                                            <option value="2">Media hoja (2 por hoja)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                
+                                <div class="qr-preview">
+                                    <div class="qr-vacio" id="qr-vacio">Acá se ve tu QR</div>
+                                    <img id="qr-preview-img" alt="Vista previa del QR" hidden>
+                                    <small>Vista previa</small>
+                                </div>
+                            </div>
+                
+                            <p class="gen-nota">Antes de imprimir en cantidad, escaneá el PDF con otro celular y probá que el pago funcione.</p>
+                
+                            <div class="gen-btns">
+                                <button type="button" class="calc-btn" id="qr-descargar">Descargar PDF</button>
+                                <button type="button" class="calc-btn calc-btn-sec" id="qr-imprimir">Imprimir</button>
+                            </div>
+                        </article>
+                
+                    </div>
+                </div>
+
+                <!-- Panel: Plantillas -->
+                <div class="panel" id="plantillas">
+                    <!-- <div class="panel-vacio">
+                        <i class="fa-solid fa-table"></i>
+                        <h3>Plantillas</h3>
+                        <p>Estamos preparando plantillas listas para descargar. Muy pronto.</p>
+                    </div> -->
+
+                    <a href="plantillas/Plantilla Arqueo de Caja Chica.xlsm" download="plantillas/Plantilla Arqueo de Caja Chica.xlsm" class="plantilla-link">
+                        <i class="fa-solid fa-file-excel plantilla-icono"></i>
+                        <span class="plantilla-info">
+                            <span class="plantilla-nombre">Plantilla de Arqueo de Caja Diario</span>
+                            <span class="plantilla-desc">Te sirve para dejar el registro monetario que tuviste en tu negocio el día que la completes.</span>
+                        </span>
+                        <i class="fa-solid fa-download plantilla-descargar"></i>
+                    </a>
+
+                    <a href="plantillas/Productos_Kiosco.xlsx" download="plantillas/Productos_Kiosco.xlsx" class="plantilla-link">
+                        <i class="fa-solid fa-file-excel plantilla-icono"></i>
+                        <span class="plantilla-info">
+                            <span class="plantilla-nombre">Lista de +600 Productos de Kiosco (incluye código barra)</span>
+                            <span class="plantilla-desc">Esta lista de productos fue extraída de un kiosco real. Posee códigos de barra real. Importable desde el software "POSKo" gratuito de NSSoftware.</span>
+                        </span>
+                        <i class="fa-solid fa-download plantilla-descargar"></i>
+                    </a>
+
+                    <a href="plantillas/Productos_Verduleria.xlsx" download="plantillas/Productos_Verduleria.xlsx" class="plantilla-link">
+                        <i class="fa-solid fa-file-excel plantilla-icono"></i>
+                        <span class="plantilla-info">
+                            <span class="plantilla-nombre">Lista +50 Productos de Verdulería/Frutería</span>
+                            <span class="plantilla-desc">Creada por y para negocios de verduras y frutas. Importable desde el software "Perapp" de NSSoftware.</span>
+                        </span>
+                        <i class="fa-solid fa-download plantilla-descargar"></i>
+                    </a>
+
+                    <a href="plantillas/Productos_Libreria.xlsx" download="plantillas/Productos_Libreria.xlsx" class="plantilla-link">
+                        <i class="fa-solid fa-file-excel plantilla-icono"></i>
+                        <span class="plantilla-info">
+                            <span class="plantilla-nombre">Lista +300 Productos de Librería</span>
+                            <span class="plantilla-desc">Importable desde el software "POSKo" gratuito de NSSoftware.</span>
+                        </span>
+                        <i class="fa-solid fa-download plantilla-descargar"></i>
+                    </a>
+
+                    <a href="plantillas/Productos_Ferreteria.xlsx" download="plantillas/Productos_Ferreteria.xlsx" class="plantilla-link">
+                        <i class="fa-solid fa-file-excel plantilla-icono"></i>
+                        <span class="plantilla-info">
+                            <span class="plantilla-nombre">Lista +300 Productos de Ferretería</span>
+                            <span class="plantilla-desc">Importable desde el software "POSKo" gratuito de NSSoftware.</span>
+                        </span>
+                        <i class="fa-solid fa-download plantilla-descargar"></i>
+                    </a>
+                </div>
+
+                <!-- Panel: Documentos -->
+                <div class="panel" id="documentos">
+                    <div class="panel-vacio">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <h3>Documentos</h3>
+                        <p>Guías y documentos útiles para tu negocio. Muy pronto.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="seccion">
+            <section>
+                <p style="width: fit-content; font-size: 1.2rem; margin: 1rem 0;">North Star Software &copy;</p>
+                <p>Construimos futuro, facilitamos procesos. Optimizá tu negocio con nosotros y dale un soporte tecnológico.</p>
+            </section>
+
+            <section>
+
+                <b>Compañía</b>
+
+                <a href="sobrenosotros.html">Sobre nosotros</a>
+                <a href="trabajoscompletados.html">Trabajos completados</a>
+                <a href="politicasylegal.html">Políticas y legal</a>
+                <a href="trabajaconnosotros.html">Trabajá con nosotros</a>
+            </section>
+        </div>
+
+        <div class="seccion">
+            <section>
+                <b>Soluciones</b>
+
+                <a href="cashreg.html">Cashreg</a>
+                <a href="gym.html">GGYM</a>
+                <a href="posko.html">POSKo</a>
+                
+            </section>
+            
+            <section>
+                <b>Contacto</b>
+
+                <a><i class="fa-solid fa-envelope"></i> nssoftware.soporte@gmail.com</a>
+                <a><i class="fa-brands fa-instagram"></i> nssoftware_</a>
+                <a><i class="fa-solid fa-phone"></i> +54 9 264 512-8508</a>
+            </section>
+        </div>
+    </footer>
+
+<script src="js/burger_menu.js"></script>
+<script src="js/herramientas.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+<script src="js/generadores.js"></script>
+<script src="js/aside.js"></script>
+</body>
+</html>

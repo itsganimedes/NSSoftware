@@ -1,0 +1,93 @@
+/* ===== Lista de plantillas descargables ===== */
+
+.activo#plantillas{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.plantillas-lista{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.plantilla-link{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 18px;
+    background: var(--card);
+    border: 1px solid rgba(43, 184, 250, 0.25);
+    border-radius: 12px;
+    color: var(--texts_icons);
+    text-decoration: none;
+    transition: border-color 0.2s, background 0.2s, transform 0.1s;
+}
+
+.plantilla-link:hover{
+    border-color: var(--texts_icons);
+    background: rgba(43, 184, 250, 0.08);
+}
+
+.plantilla-link:active{
+    transform: scale(0.99);
+}
+
+.plantilla-link:focus-visible{
+    outline: 2px solid var(--texts_icons);
+    outline-offset: 2px;
+}
+
+/* Ícono del tipo de archivo */
+.plantilla-icono{
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(43, 184, 250, 0.12);
+    font-size: 1.4rem;
+}
+
+/* Nombre y descripción */
+.plantilla-info{
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.plantilla-nombre{
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.plantilla-desc{
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* Ícono de descarga */
+.plantilla-descargar{
+    flex-shrink: 0;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+
+.plantilla-link:hover .plantilla-descargar{
+    transform: translateY(3px);
+}
+
+@media (max-width: 480px){
+    .plantilla-link{
+        padding: 12px 14px;
+        gap: 12px;
+    }
+}
